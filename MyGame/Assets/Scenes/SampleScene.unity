@@ -685,7 +685,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.00000029802322, y: 0, z: -10}
+  m_LocalPosition: {x: 0.00000029802322, y: 2.2319999, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1301,7 +1301,7 @@ MonoBehaviour:
   m_YDamping: 0.5
   m_ZDamping: 0.5
   m_ScreenX: 0.5
-  m_ScreenY: 0.5
+  m_ScreenY: 0.686
   m_CameraDistance: 10
   m_DeadZoneWidth: 0.05
   m_DeadZoneHeight: 0.1
@@ -1350,6 +1350,7 @@ GameObject:
   - component: {fileID: 1448839947}
   - component: {fileID: 1448839946}
   - component: {fileID: 1448839949}
+  - component: {fileID: 1448839950}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -1519,6 +1520,19 @@ MonoBehaviour:
   joystick: {fileID: 61986868}
   jumpButton: {fileID: 1143318763}
   runSpeed: 50
+--- !u!114 &1448839950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1448839942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d7ccde2b67387a41a15caf3012ed088, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 50
 --- !u!1 &1485612055
 GameObject:
   m_ObjectHideFlags: 0
@@ -1959,6 +1973,7 @@ GameObject:
   - component: {fileID: 1797901091}
   - component: {fileID: 1797901090}
   - component: {fileID: 1797901092}
+  - component: {fileID: 1797901093}
   m_Layer: 0
   m_Name: HealthPlant
   m_TagString: Untagged
@@ -2043,6 +2058,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1797901093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1797901088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76f48c78457020d439ceb839fd2470d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fruit: {fileID: 1134839800}
+  resetFruitTime: 3
 --- !u!1 &1805457129
 GameObject:
   m_ObjectHideFlags: 0
@@ -2681,7 +2710,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2033430597}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.00000029802322, y: 0, z: -10}
+  m_LocalPosition: {x: 0.00000029802322, y: 2.2319999, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1432833002}
