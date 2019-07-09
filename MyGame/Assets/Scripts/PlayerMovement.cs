@@ -32,10 +32,10 @@ public class PlayerMovement : MonoBehaviour
         // if (Input.GetButtonDown("Jump")) {
         //     jump = true;
         // }
-        jumpButton.onClick.AddListener(CharacterJump);
+        // jumpButton.onClick.AddListener(CharacterJump);
     }
 
-    private void CharacterJump() {
+    public void CharacterJump() {
         jump = true;
         animator.SetBool("IsJumping", true);
     }

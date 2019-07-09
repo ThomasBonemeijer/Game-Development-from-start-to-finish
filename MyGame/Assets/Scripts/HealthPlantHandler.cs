@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class HealthPlantHandler : MonoBehaviour
 {
+    public Animator animator;
     private GameObject player;
     private float playerHealth;
-    public GameObject fruit;
-    public float resetFruitTime = 5f;
-    private Vector3 fruitScale0 = new Vector3(0f, 0f, 1f);
-    private Vector3 fruitScale1 = new Vector3(1f, 1f, 1f);
+    private float resetFruitTime = 3f;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,20 +20,18 @@ public class HealthPlantHandler : MonoBehaviour
         playerHealth = player.GetComponent<PlayerHandler>().health;
     }
 
+    // Check collision with player
      void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.name == "Player" && playerHealth < 100f)
-    {
-        fruit.transform.localScale = fruitScale0;
-        gameObject.GetComponent<CircleCollider2D>().enabled = false;
-        player.GetComponent<PlayerHandler>().health = 100f;
-        Invoke("ResetFruit", resetFruitTime);
+        {
+            animator.SetBool("IsPlucked", true);
+            player.GetComponent<PlayerHandler>().health = 100f;
+            Invoke("ResetFruit", resetFruitTime);
+        }
     }
-    }
-
+    
     private void ResetFruit() {
-        fruit.transform.localScale = fruitScale1;
-        gameObject.GetComponent<CircleCollider2D>().enabled = true;
-        
+        animator.SetBool("IsPlucked", false);
     }
 }
