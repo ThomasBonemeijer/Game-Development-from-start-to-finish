@@ -5,8 +5,9 @@ using UnityEngine;
 public class Bone : MonoBehaviour
 {
     public float forceSpeed = 15f;
-    public float RotateSpeed = 0;
+    public float RotateSpeed = -5f;
     private Rigidbody2D rb;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -18,12 +19,21 @@ public class Bone : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        StartCoroutine(DestroyProp());
+        // StartCoroutine(DestroyProp());
     }
 
-    IEnumerator DestroyProp()
+    // IEnumerator DestroyProp()
+    // {
+    //     yield return new WaitForSeconds(5);
+    //     Destroy(gameObject);
+    // }
+
+    void OnCollisionEnter2D(Collision2D col)
     {
-        yield return new WaitForSeconds(5);
-        Destroy(gameObject);
+        if (col.gameObject.name == "Player")
+        {
+            Destroy(gameObject);
+            GameObject.Find("Player").GetComponent<Weapon>().boneAmmo += 1f;
+        }
     }
 }
