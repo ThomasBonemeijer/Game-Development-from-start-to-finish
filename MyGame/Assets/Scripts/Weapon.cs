@@ -11,6 +11,7 @@ public class Weapon : MonoBehaviour
     public float boneAmmo = 1f;
     public Sprite boneHand;
     public Sprite leftHand;
+    private bool attckOnCooldown = false;
 
     void Start()
     {
@@ -29,10 +30,18 @@ public class Weapon : MonoBehaviour
     }
 
     public void Shoot() {
-        if(boneAmmo != 0f) {
+        if(boneAmmo != 0f && attckOnCooldown == false) {
+            StartCoroutine(Cooldown());
             animator.SetTrigger("Attack");
             Instantiate(BonePrefab, firePoint.position, firePoint.rotation);
             boneAmmo -= 1f;
         }
+    }
+
+    IEnumerator Cooldown()
+    {
+        attckOnCooldown = true;
+        yield return new WaitForSeconds(.5f);
+        attckOnCooldown = false;
     }
 }
