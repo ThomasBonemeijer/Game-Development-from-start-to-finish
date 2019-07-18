@@ -1,13 +1,19 @@
 fileFormatVersion: 2
-guid: bf46e1eb2dac77b41abce5ca41161ac6
+guid: 9291bd6c18ca0f94cb424f60bd9c8db6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8296411716907235559
-    second: PalmTreeHead
+      213: -1855291203096096631
+    second: SmallRockSprite1
   - first:
-      213: 7204292430908705000
-    second: PalmTreeStem
+      213: -8559859266715342699
+    second: BigRockSprite
+  - first:
+      213: 3502940664408261891
+    second: SmallRockSprite2
+  - first:
+      213: -2248266167417562649
+    second: SmallRockSprite3
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -128,13 +134,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PalmTreeHead
+      name: SmallRockSprite1
       rect:
         serializedVersion: 2
-        x: 208
-        y: 1393
-        width: 1393
-        height: 862
+        x: 136
+        y: 109
+        width: 156
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,20 +148,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fdeb4daca90fae144b74053804fb4ec1
-      internalID: -8296411716907235559
+      spriteID: 62d54ed2c0f72aa4db875caaf6d58282
+      internalID: -1855291203096096631
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PalmTreeStem
+      name: BigRockSprite
       rect:
         serializedVersion: 2
-        x: 668
-        y: 107
-        width: 561
-        height: 1081
+        x: 426
+        y: 70
+        width: 1479
+        height: 1099
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,8 +169,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 78da8a6eaf3837849bed9dc2fd3e9e13
-      internalID: 7204292430908705000
+      spriteID: 31190c5ea3f25f4438b426834a883b4a
+      internalID: -8559859266715342699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallRockSprite2
+      rect:
+        serializedVersion: 2
+        x: 2092
+        y: 99
+        width: 166
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30c5b4dab4138ef488d4308ca93b0bd6
+      internalID: 3502940664408261891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallRockSprite3
+      rect:
+        serializedVersion: 2
+        x: 2392
+        y: 112
+        width: 163
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3b22edd15bf2324aa408811e88fb9df
+      internalID: -2248266167417562649
       vertices: []
       indices: 
       edges: []

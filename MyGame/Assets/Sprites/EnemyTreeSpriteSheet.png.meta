@@ -1,0 +1,544 @@
+fileFormatVersion: 2
+guid: eb813ca21b07e5748b1b6b0e0549ca31
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7196159855381413456
+    second: EnemyTreeFace1
+  - first:
+      213: 5138068928320700131
+    second: EnemyTreeBranch
+  - first:
+      213: 6409130871203728569
+    second: EnemyTreeTrunk
+  - first:
+      213: 1411944533112234617
+    second: EnemyTreeFace2
+  - first:
+      213: -2653003797565082497
+    second: EnemyTreeTongue
+  - first:
+      213: -432403175357554419
+    second: EnemyTreeHeart
+  - first:
+      213: -1977096203246088686
+    second: EnemyTreeBomb
+  - first:
+      213: 3721205072955071658
+    second: EnemyTreeNut
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 100
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 100
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 100
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 100
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 100
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: EnemyTreeFace1
+      rect:
+        serializedVersion: 2
+        x: 4055
+        y: 3019
+        width: 356
+        height: 465
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22f8c3a764dc749448f581ca3e8d6c33
+      internalID: -7196159855381413456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyTreeBranch
+      rect:
+        serializedVersion: 2
+        x: 4790
+        y: 2988
+        width: 836
+        height: 514
+      alignment: 9
+      pivot: {x: 0.15327066, y: 0.7581906}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0e0f10decb31c944a775bc8e1e01bb0
+      internalID: 5138068928320700131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyTreeTrunk
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 118
+        width: 3617
+        height: 3253
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -799.5, y: -1415.5}
+        - {x: -850.5, y: -1390.5}
+        - {x: -921.5, y: -1364.5}
+        - {x: -967.5, y: -1327.5}
+        - {x: -989.5, y: -1295.5}
+        - {x: -1048.5, y: -1216.5}
+        - {x: -1113.5, y: -1103.5}
+        - {x: -1164.5, y: -976.5}
+        - {x: -1194.5, y: -855.5}
+        - {x: -1204.5, y: -784.5}
+        - {x: -1206.5, y: -728.5}
+        - {x: -1220.5, y: -681.5}
+        - {x: -1213.5, y: -602.5}
+        - {x: -1194.5, y: -557.5}
+        - {x: -1186.5, y: -527.5}
+        - {x: -1166.5, y: -409.5}
+        - {x: -1146.5, y: -374.5}
+        - {x: -1172.5, y: -232.5}
+        - {x: -1201.5, y: -103.5}
+        - {x: -1210.5, y: -34.5}
+        - {x: -1208.5, y: 4.5}
+        - {x: -1189.5, y: 69.5}
+        - {x: -1161.5, y: 140.5}
+        - {x: -1114.5, y: 214.5}
+        - {x: -1090.5, y: 242.5}
+        - {x: -1027.5, y: 292.5}
+        - {x: -907.5, y: 356.5}
+        - {x: -789.5, y: 389.5}
+        - {x: -751.5, y: 395.5}
+        - {x: -631.5, y: 405.5}
+        - {x: -578.5, y: 402.5}
+        - {x: -457.5, y: 379.5}
+        - {x: -263.5, y: 320.5}
+        - {x: -205.5, y: 298.5}
+        - {x: -92.5, y: 269.5}
+        - {x: -41.5, y: 259.5}
+        - {x: 12.5, y: 251.5}
+        - {x: 127.5, y: 240.5}
+        - {x: 172.5, y: 245.5}
+        - {x: 277.5, y: 259.5}
+        - {x: 344.5, y: 275.5}
+        - {x: 421.5, y: 302.5}
+        - {x: 485.5, y: 330.5}
+        - {x: 562.5, y: 367.5}
+        - {x: 673.5, y: 433.5}
+        - {x: 735.5, y: 472.5}
+        - {x: 1003.5, y: 650.5}
+        - {x: 1131.5, y: 732.5}
+        - {x: 1197.5, y: 770.5}
+        - {x: 1334.5, y: 845.5}
+        - {x: 1362.5, y: 858.5}
+        - {x: 1465.5, y: 903.5}
+        - {x: 1613.5, y: 948.5}
+        - {x: 1760.5, y: 979.5}
+        - {x: 1800.5, y: 979.5}
+        - {x: 1808.5, y: 991.5}
+        - {x: 1808.5, y: 1010.5}
+        - {x: 1807.5, y: 1011.5}
+        - {x: 1788.5, y: 1024.5}
+        - {x: 1749.5, y: 1025.5}
+        - {x: 1688.5, y: 1017.5}
+        - {x: 1625.5, y: 1001.5}
+        - {x: 1523.5, y: 972.5}
+        - {x: 1408.5, y: 935.5}
+        - {x: 1332.5, y: 906.5}
+        - {x: 1206.5, y: 854.5}
+        - {x: 1092.5, y: 802.5}
+        - {x: 1007.5, y: 752.5}
+        - {x: 916.5, y: 692.5}
+        - {x: 814.5, y: 621.5}
+        - {x: 758.5, y: 581.5}
+        - {x: 638.5, y: 502.5}
+        - {x: 560.5, y: 456.5}
+        - {x: 451.5, y: 400.5}
+        - {x: 325.5, y: 359.5}
+        - {x: 220.5, y: 343.5}
+        - {x: 145.5, y: 342.5}
+        - {x: 103.5, y: 341.5}
+        - {x: -4.5, y: 355.5}
+        - {x: -150.5, y: 399.5}
+        - {x: -243.5, y: 438.5}
+        - {x: -306.5, y: 460.5}
+        - {x: -401.5, y: 488.5}
+        - {x: -457.5, y: 499.5}
+        - {x: -467.5, y: 501.5}
+        - {x: -488.5, y: 505.5}
+        - {x: -562.5, y: 516.5}
+        - {x: -614.5, y: 521.5}
+        - {x: -695.5, y: 521.5}
+        - {x: -748.5, y: 518.5}
+        - {x: -803.5, y: 508.5}
+        - {x: -815.5, y: 506.5}
+        - {x: -854.5, y: 499.5}
+        - {x: -968.5, y: 480.5}
+        - {x: -1078.5, y: 474.5}
+        - {x: -1078.5, y: 534.5}
+        - {x: -1050.5, y: 597.5}
+        - {x: -1020.5, y: 642.5}
+        - {x: -975.5, y: 693.5}
+        - {x: -943.5, y: 720.5}
+        - {x: -690.5, y: 972.5}
+        - {x: -610.5, y: 1042.5}
+        - {x: -517.5, y: 1112.5}
+        - {x: -478.5, y: 1135.5}
+        - {x: -420.5, y: 1171.5}
+        - {x: -324.5, y: 1219.5}
+        - {x: -260.5, y: 1245.5}
+        - {x: -227.5, y: 1260.5}
+        - {x: -114.5, y: 1297.5}
+        - {x: 20.5, y: 1333.5}
+        - {x: 202.5, y: 1369.5}
+        - {x: 347.5, y: 1393.5}
+        - {x: 452.5, y: 1410.5}
+        - {x: 574.5, y: 1432.5}
+        - {x: 665.5, y: 1448.5}
+        - {x: 866.5, y: 1491.5}
+        - {x: 884.5, y: 1491.5}
+        - {x: 1005.5, y: 1525.5}
+        - {x: 1047.5, y: 1541.5}
+        - {x: 1087.5, y: 1561.5}
+        - {x: 1116.5, y: 1583.5}
+        - {x: 1134.5, y: 1609.5}
+        - {x: 1132.5, y: 1625.5}
+        - {x: 1124.5, y: 1626.5}
+        - {x: 1098.5, y: 1626.5}
+        - {x: 1082.5, y: 1619.5}
+        - {x: 969.5, y: 1568.5}
+        - {x: 933.5, y: 1560.5}
+        - {x: 755.5, y: 1518.5}
+        - {x: 643.5, y: 1502.5}
+        - {x: 484.5, y: 1491.5}
+        - {x: 314.5, y: 1474.5}
+        - {x: 234.5, y: 1465.5}
+        - {x: 108.5, y: 1442.5}
+        - {x: 33.5, y: 1425.5}
+        - {x: -64.5, y: 1400.5}
+        - {x: -127.5, y: 1382.5}
+        - {x: -238.5, y: 1343.5}
+        - {x: -371.5, y: 1288.5}
+        - {x: -492.5, y: 1226.5}
+        - {x: -556.5, y: 1189.5}
+        - {x: -612.5, y: 1154.5}
+        - {x: -660.5, y: 1121.5}
+        - {x: -696.5, y: 1095.5}
+        - {x: -742.5, y: 1059.5}
+        - {x: -783.5, y: 1027.5}
+        - {x: -861.5, y: 957.5}
+        - {x: -919.5, y: 900.5}
+        - {x: -1038.5, y: 799.5}
+        - {x: -1090.5, y: 757.5}
+        - {x: -1183.5, y: 692.5}
+        - {x: -1270.5, y: 653.5}
+        - {x: -1337.5, y: 649.5}
+        - {x: -1386.5, y: 690.5}
+        - {x: -1422.5, y: 803.5}
+        - {x: -1434.5, y: 864.5}
+        - {x: -1458.5, y: 985.5}
+        - {x: -1468.5, y: 1072.5}
+        - {x: -1470.5, y: 1181.5}
+        - {x: -1467.5, y: 1233.5}
+        - {x: -1456.5, y: 1306.5}
+        - {x: -1434.5, y: 1379.5}
+        - {x: -1416.5, y: 1463.5}
+        - {x: -1417.5, y: 1491.5}
+        - {x: -1423.5, y: 1496.5}
+        - {x: -1435.5, y: 1494.5}
+        - {x: -1467.5, y: 1453.5}
+        - {x: -1510.5, y: 1360.5}
+        - {x: -1534.5, y: 1285.5}
+        - {x: -1542.5, y: 1148.5}
+        - {x: -1540.5, y: 995.5}
+        - {x: -1541.5, y: 914.5}
+        - {x: -1546.5, y: 792.5}
+        - {x: -1560.5, y: 738.5}
+        - {x: -1595.5, y: 747.5}
+        - {x: -1651.5, y: 850.5}
+        - {x: -1709.5, y: 992.5}
+        - {x: -1781.5, y: 1169.5}
+        - {x: -1806.5, y: 1207.5}
+        - {x: -1808.5, y: 1205.5}
+        - {x: -1808.5, y: 1028.5}
+        - {x: -1797.5, y: 991.5}
+        - {x: -1757.5, y: 852.5}
+        - {x: -1747.5, y: 778.5}
+        - {x: -1748.5, y: 688.5}
+        - {x: -1794.5, y: 639.5}
+        - {x: -1807.5, y: 637.5}
+        - {x: -1808.5, y: 636.5}
+        - {x: -1808.5, y: -89.5}
+        - {x: -1801.5, y: -96.5}
+        - {x: -1794.5, y: -102.5}
+        - {x: -1781.5, y: -115.5}
+        - {x: -1720.5, y: -181.5}
+        - {x: -1684.5, y: -234.5}
+        - {x: -1669.5, y: -311.5}
+        - {x: -1672.5, y: -431.5}
+        - {x: -1683.5, y: -569.5}
+        - {x: -1708.5, y: -725.5}
+        - {x: -1719.5, y: -789.5}
+        - {x: -1756.5, y: -947.5}
+        - {x: -1779.5, y: -1022.5}
+        - {x: -1808.5, y: -1095.5}
+        - {x: -1808.5, y: -1615.5}
+        - {x: -1730.5, y: -1616.5}
+        - {x: -1451.5, y: -1620.5}
+        - {x: -1439.5, y: -1620.5}
+        - {x: -1241.5, y: -1621.5}
+        - {x: -1146.5, y: -1623.5}
+        - {x: -1058.5, y: -1624.5}
+        - {x: -790.5, y: -1626.5}
+        - {x: -651.5, y: -1626.5}
+        - {x: -668.5, y: -1535.5}
+        - {x: -733.5, y: -1465.5}
+      tessellationDetail: 0.05
+      bones: []
+      spriteID: ea0589c74c9977e46a77d20207d1141e
+      internalID: 6409130871203728569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyTreeFace2
+      rect:
+        serializedVersion: 2
+        x: 4064
+        y: 2241
+        width: 357
+        height: 593
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 653ceade57fffa041a5c274eca3f8b4f
+      internalID: 1411944533112234617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyTreeTongue
+      rect:
+        serializedVersion: 2
+        x: 5423
+        y: 2586
+        width: 166
+        height: 232
+      alignment: 9
+      pivot: {x: 0.5068712, y: 0.78022504}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbfda2144ec979243b7fff937a0c9794
+      internalID: -2653003797565082497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyTreeHeart
+      rect:
+        serializedVersion: 2
+        x: 5384
+        y: 2257
+        width: 258
+        height: 239
+      alignment: 9
+      pivot: {x: 0.47347385, y: 0.87223375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a294513cb2e39645acb2a42fa1581b8
+      internalID: -432403175357554419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyTreeBomb
+      rect:
+        serializedVersion: 2
+        x: 4163
+        y: 1799
+        width: 150
+        height: 209
+      alignment: 9
+      pivot: {x: 0.5, y: 0.9319934}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4203a6049bf7ada4cb0bc6354d626cc5
+      internalID: -1977096203246088686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyTreeNut
+      rect:
+        serializedVersion: 2
+        x: 4151
+        y: 1496
+        width: 162
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7663419a0fe24a344b445897872d2840
+      internalID: 3721205072955071658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

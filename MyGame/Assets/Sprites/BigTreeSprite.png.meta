@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: bf46e1eb2dac77b41abce5ca41161ac6
+guid: 914c98c829a26c94d9726c1a46346325
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8296411716907235559
-    second: PalmTreeHead
+      213: 5858543894246480962
+    second: BigTreeStem
   - first:
-      213: 7204292430908705000
-    second: PalmTreeStem
+      213: 1485982157772698672
+    second: BigTreeHead
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -128,13 +128,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PalmTreeHead
+      name: BigTreeStem
       rect:
         serializedVersion: 2
-        x: 208
-        y: 1393
-        width: 1393
-        height: 862
+        x: 260
+        y: 82
+        width: 2853
+        height: 2908
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,20 +142,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fdeb4daca90fae144b74053804fb4ec1
-      internalID: -8296411716907235559
+      spriteID: 3c389e7aa42e4a944916c29fe92c28fe
+      internalID: 5858543894246480962
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PalmTreeStem
+      name: BigTreeHead
       rect:
         serializedVersion: 2
-        x: 668
-        y: 107
-        width: 561
-        height: 1081
+        x: 3695
+        y: 750
+        width: 4734
+        height: 1492
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,8 +163,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 78da8a6eaf3837849bed9dc2fd3e9e13
-      internalID: 7204292430908705000
+      spriteID: 23e8a78bbf0b4e54e8cc471c14fc1dbb
+      internalID: 1485982157772698672
       vertices: []
       indices: 
       edges: []
