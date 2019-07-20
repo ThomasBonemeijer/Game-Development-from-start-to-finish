@@ -7,23 +7,25 @@ public class TravelPointHandler : MonoBehaviour
 {
     public string sceneName;
     public GameObject useButton;
+    public bool isSceneChanger = false;
 
     void OnTriggerEnter2D(Collider2D col) {
         if (col.gameObject.name == "Player") {
             useButton.SetActive(true);
-        }else {
-            useButton.SetActive(false);
+            isSceneChanger = true;
         }
     }
 
     void OnTriggerExit2D(Collider2D col) {
         if (col.gameObject.name == "Player") {
             useButton.SetActive(false);
+            isSceneChanger = false;
         }
     }
 
     public void ChangeScene(){
-        if (sceneName != "") {
+        if (sceneName != "" && isSceneChanger == true) {
+            GameObject.Find("Player").GetComponent<PlayerHandler>().SavePlayer();
             SceneManager.LoadScene (sceneName);
         }
     }

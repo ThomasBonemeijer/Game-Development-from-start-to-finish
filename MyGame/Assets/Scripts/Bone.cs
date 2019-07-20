@@ -33,7 +33,7 @@ public class Bone : MonoBehaviour
         if (col.gameObject.name == "Player")
         {
             Destroy(gameObject);
-            GameObject.Find("Player").GetComponent<Weapon>().boneAmmo += 1f;
+            GameObject.Find("Player").GetComponent<PlayerHandler>().bones += 1;
         }
     }
 }

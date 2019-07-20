@@ -8,7 +8,7 @@ public class Weapon : MonoBehaviour
     public Transform firePoint;
     public Animator animator;
     public GameObject BonePrefab;
-    public float boneAmmo = 1f;
+    public float boneAmmo;
     public Sprite boneHand;
     public Sprite leftHand;
     private bool attckOnCooldown = false;
@@ -21,7 +21,8 @@ public class Weapon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (boneAmmo >= 1f) {
+        boneAmmo = GameObject.Find("Player").GetComponent<PlayerHandler>().bones;
+        if (boneAmmo >= 1) {
             GameObject.Find("Lefthand").GetComponent<SpriteRenderer>().sprite = boneHand;
         } else
         {
@@ -34,7 +35,7 @@ public class Weapon : MonoBehaviour
             StartCoroutine(Cooldown());
             animator.SetTrigger("Attack");
             Instantiate(BonePrefab, firePoint.position, firePoint.rotation);
-            boneAmmo -= 1f;
+            GameObject.Find("Player").GetComponent<PlayerHandler>().bones -= 1;
         }
     }
 
