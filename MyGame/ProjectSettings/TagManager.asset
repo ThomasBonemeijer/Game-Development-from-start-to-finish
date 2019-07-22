@@ -47,6 +47,9 @@ TagManager:
   - name: BackgroundProps
     uniqueID: 3777299797
     locked: 0
+  - name: Enemies
+    uniqueID: 2680484447
+    locked: 0
   - name: Player
     uniqueID: 2233603069
     locked: 0
