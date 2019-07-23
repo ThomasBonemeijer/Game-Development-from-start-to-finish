@@ -30,15 +30,15 @@ public class SceneHandler : MonoBehaviour
             // Debug.Log("1");
             if (player.GetComponent<PlayerHandler>().firstTimePlaying == true) {
                 player.transform.position = new Vector3(0f, 0f, 0f);
-                Debug.Log("First time playing!");
+                // Debug.Log("First time playing!");
             } 
             else if (player.GetComponent<PlayerHandler>().firstTimePlaying == false && player.GetComponent<PlayerHandler>().previousScene == "Scene2") {
                  player.transform.position = GameObject.Find("SpawnPointRight").transform.position;
-                Debug.Log("Not first time playing!");
+                // Debug.Log("Not first time playing!");
             }
             else if (player.GetComponent<PlayerHandler>().firstTimePlaying == false && player.GetComponent<PlayerHandler>().previousScene == "Scene3") {
                  player.transform.position = GameObject.Find("SpawnPointRight").transform.position;
-                Debug.Log("Not first time playing!");
+                // Debug.Log("Not first time playing!");
             }
             
         } else if (scene.name == "Scene2") {

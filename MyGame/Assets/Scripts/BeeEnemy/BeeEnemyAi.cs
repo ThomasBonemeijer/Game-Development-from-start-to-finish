@@ -86,7 +86,7 @@ public class BeeEnemyAi : MonoBehaviour
         if (!p.error) {
             path = p;
             currentWaypoint = 0;
-            // hasReturnedToIdlePoint = true;
+            hasReturnedToIdlePoint = true;
         }
     }
 
@@ -102,7 +102,7 @@ public class BeeEnemyAi : MonoBehaviour
     {
         if (col.gameObject.name == "Player") {
             PlayerInRadius = false;
-            // hasReturnedToIdlePoint = false;
+            hasReturnedToIdlePoint = false;
         }
     }
 }
