@@ -11,6 +11,7 @@ public class EnemyTreeAi : MonoBehaviour
     public GameObject nut;
     public Transform nutFirePoint;
     public Transform[] bombSpawnArray;
+    public float health = 300f;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +29,9 @@ public class EnemyTreeAi : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if(health <= 0) {
+            Destroy(gameObject);
+        }
     }
 
     void OnTriggerEnter2D(Collider2D col) {

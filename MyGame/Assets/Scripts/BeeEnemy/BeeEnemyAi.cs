@@ -5,6 +5,7 @@ using Pathfinding;
 
 public class BeeEnemyAi : MonoBehaviour
 {
+    Animator animator;
     public Transform target;
     public Vector3 idlePoint;
     public bool hasReturnedToIdlePoint = true;
@@ -18,11 +19,17 @@ public class BeeEnemyAi : MonoBehaviour
     public Transform beeEnemyGfx;
     public GameObject firePoint;
     bool PlayerInRadius = false;
+    bool PlayerInShootRadius = false;
+    public float playerDistance;
+    public GameObject poisonBall;
 
     // Start is called before the first frame update
     void Start()
     {
-        idlePoint = gameObject.transform.position;
+        // firePoint = transform.Find("ShootPoint").gameObject;
+        animator = GetComponent<Animator>();
+        target = GameObject.Find("BeeTarget").transform;
+        idlePoint = transform.position;
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
         InvokeRepeating("UpdatePath", 0f, .5f);
@@ -56,29 +63,41 @@ public class BeeEnemyAi : MonoBehaviour
         if (PlayerInRadius == true) {
             if (target.transform.position.x >= transform.position.x) {
                 beeEnemyGfx.localScale = new Vector3(-1f, 1f, 1f);
+                // firePoint.transform.rotation = Quaternion.Euler(0, 0, 336.53f);
             } else if (target.transform.position.x <= transform.position.x) {
                 beeEnemyGfx.transform.localScale = new Vector3(1f, 1f, 1f);
+                // firePoint.transform.rotation = Quaternion.Euler(0, 180, 336.53f);
             } 
         } else if (PlayerInRadius == false) {
              if (rb.velocity.x >= 0.01f) {
                 beeEnemyGfx.localScale = new Vector3(-1f, 1f, 1f);
-                firePoint.transform.rotation = Quaternion.Euler(0, 0, 0);
+                // firePoint.transform.rotation = Quaternion.Euler(0, 0, 336.53f);
             } else if (rb.velocity.x <= -0.01f) {
                 beeEnemyGfx.transform.localScale = new Vector3(1f, 1f, 1f);
-                firePoint.transform.rotation = Quaternion.Euler(0, 180, 0);
+                // firePoint.transform.rotation = Quaternion.Euler(0, 180, 336.53f);
             }
         }
-
     }
 
     void UpdatePath() {
-        if (PlayerInRadius == true) {
+        playerDistance = Vector3.Distance(GameObject.Find("Player").transform.position, transform.position);
+
+        if (playerDistance <= 6f) {
+            PlayerInShootRadius = true;
+        } else {
+            PlayerInShootRadius = false;
+        }
+
+        if (PlayerInRadius == true && PlayerInShootRadius == false) {
             if (seeker.IsDone())
             seeker.StartPath(rb.position, target.position, OnPathComplete);
             hasReturnedToIdlePoint = false;
         } else if (PlayerInRadius == false && hasReturnedToIdlePoint == false) {
             if (seeker.IsDone())
             seeker.StartPath(rb.position, idlePoint, OnPathComplete);
+        } 
+        else if (PlayerInRadius == true && PlayerInShootRadius == true) {
+            Shoot();
         }
     }
 
@@ -104,5 +123,10 @@ public class BeeEnemyAi : MonoBehaviour
             PlayerInRadius = false;
             hasReturnedToIdlePoint = false;
         }
+    }
+
+    void Shoot() {
+        animator.SetTrigger("Attack");
+        Instantiate(poisonBall, firePoint.transform.position, firePoint.transform.rotation);
     }
 }

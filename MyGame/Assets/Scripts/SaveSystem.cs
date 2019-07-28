@@ -15,6 +15,17 @@ public static class SaveSystem
         stream.Close();
     }
 
+    // public static void ResetPlayer (PlayerHandler player) {
+    //     BinaryFormatter formatter = new BinaryFormatter();
+    //     string path = Path.Combine(Application.persistentDataPath, "player.data");
+    //     FileStream stream = new FileStream(path, FileMode.Create);
+
+    //     PlayerData data = new PlayerData(player);
+
+    //     formatter.Serialize(stream, data);
+    //     stream.Close();
+    // }
+
     public static PlayerData LoadPlayer() {
         string path = Path.Combine(Application.persistentDataPath, "player.data");
         if (File.Exists(path)) {

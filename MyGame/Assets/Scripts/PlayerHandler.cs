@@ -5,17 +5,18 @@ using UnityEngine.UI;
 
 public class PlayerHandler : MonoBehaviour
 {
-    private Image healthBar;
+    Image healthBar;
     public float health;
     public int bones = 1;
 
     public bool firstTimePlaying;
     public string currentScene;
     public string previousScene;
-    private Vector2 spawnPoint = new Vector2(0f, 0f);
+    public Vector3 spawnPoint;
     // Start is called before the first frame update
     void Start()
     {
+        spawnPoint = transform.position;
         healthBar = GameObject.Find("HealthbarFill").GetComponent<Image>();
     }
 
@@ -49,5 +50,13 @@ public class PlayerHandler : MonoBehaviour
         // position.y = data.position[1];
         // position.z = data.position[2];
         // transform.position = position;
+    }
+
+    public void ResetPlayer() {
+        health = 100f;
+        bones = 3;
+        currentScene = "Scene1";
+        previousScene = "";
+        SavePlayer();
     }
 }

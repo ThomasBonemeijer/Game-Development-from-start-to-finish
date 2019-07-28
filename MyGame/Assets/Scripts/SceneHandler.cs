@@ -29,7 +29,7 @@ public class SceneHandler : MonoBehaviour
         if (scene.name == "Scene1") {
             // Debug.Log("1");
             if (player.GetComponent<PlayerHandler>().firstTimePlaying == true) {
-                player.transform.position = new Vector3(0f, 0f, 0f);
+                player.transform.position = GameObject.Find("SpawnPointLeft").transform.position;
                 // Debug.Log("First time playing!");
             } 
             else if (player.GetComponent<PlayerHandler>().firstTimePlaying == false && player.GetComponent<PlayerHandler>().previousScene == "Scene2") {
