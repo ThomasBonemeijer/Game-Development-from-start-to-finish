@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyTreeAi : MonoBehaviour
 {
+    public GameObject healthBar;
+    Image HealthBarHealth;
     bool istriggered = false;
     public bool isAwake = false;
     public Animator animator;
@@ -15,6 +18,7 @@ public class EnemyTreeAi : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        HealthBarHealth = healthBar.transform.GetChild(0).GetComponent<Image>();
         nutFirePoint = GameObject.Find("NutFirePoint").transform;
 
         bombSpawnArray = new Transform[3];
@@ -22,14 +26,22 @@ public class EnemyTreeAi : MonoBehaviour
         bombSpawnArray[1] = GameObject.Find("BombSpawn2").transform;
         bombSpawnArray[2] = GameObject.Find("BombSpawn3").transform;
         
-        InvokeRepeating("DropBomb", 0, 5);
+        InvokeRepeating("DropBomb", 0, 4);
         InvokeRepeating("ShootNut", 0, 3);
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (isAwake == true) {
+            healthBar.SetActive(true);
+            HealthBarHealth.fillAmount = health/100;
+        } else {
+            healthBar.SetActive(false);
+        }
+
         if(health <= 0) {
+            healthBar.SetActive(false);
             Destroy(gameObject);
         }
     }

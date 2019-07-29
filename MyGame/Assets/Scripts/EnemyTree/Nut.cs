@@ -7,6 +7,8 @@ public class Nut : MonoBehaviour
     public float forceSpeed = 15f;
     public float RotateSpeed = -1.5f;
     private Rigidbody2D rb;
+    public GameObject nutShell;
+    public GameObject nutHead;
 
     // Start is called before the first frame update
     void Start()
@@ -27,8 +29,12 @@ public class Nut : MonoBehaviour
         if (col.gameObject.name == "Player") {
             GameObject.Find("Player").GetComponent<PlayerHandler>().health -= 10;
             Destroy(gameObject);
+            Instantiate(nutShell, transform.position, transform.rotation);
+            Instantiate(nutHead, transform.position, transform.rotation);
         } else {
             Destroy(gameObject);
+            Instantiate(nutShell, transform.position, transform.rotation);
+            Instantiate(nutHead, transform.position, transform.rotation);
         }
     }
 

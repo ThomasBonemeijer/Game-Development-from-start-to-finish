@@ -634,6 +634,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyTree
       objectReference: {fileID: 0}
+    - target: {fileID: 1146189992, guid: 4226394867c340f4b90c472f7203468e, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 1039572734}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4226394867c340f4b90c472f7203468e, type: 3}
 --- !u!1 &623440208
@@ -1039,6 +1043,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1039572734 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1039572734, guid: 721e0d5630c4c9b40a21e191fdb33cc6,
+    type: 3}
+  m_PrefabInstance: {fileID: 4877309293136038235}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1090677151 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7101614216400462749, guid: 7fc6bb05e61cbdf40ba8a2767efe2780,
@@ -2572,6 +2582,10 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 73107707}
+    - target: {fileID: 1039572734, guid: 721e0d5630c4c9b40a21e191fdb33cc6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 721e0d5630c4c9b40a21e191fdb33cc6, type: 3}
 --- !u!1 &4877309293136038236 stripped

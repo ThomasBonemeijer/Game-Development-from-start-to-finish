@@ -5,6 +5,7 @@ using UnityEngine;
 public class BombFruit : MonoBehaviour
 {
     bool playerInBlastRange = false;
+    public GameObject impactEffect;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +31,8 @@ public class BombFruit : MonoBehaviour
             Debug.Log("Player hit!");
             GameObject.Find("Player").GetComponent<PlayerHandler>().health -= 25f;
             Destroy(gameObject);
+            Instantiate(impactEffect, transform.position, transform.rotation);
+            
         } else {
             StartCoroutine(DestroyBomb());
         }
@@ -41,5 +44,6 @@ public class BombFruit : MonoBehaviour
             GameObject.Find("Player").GetComponent<PlayerHandler>().health -= 25f;
         }
         Destroy(gameObject);
+        Instantiate(impactEffect, transform.position, transform.rotation);
     }
 }
