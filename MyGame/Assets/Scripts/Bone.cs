@@ -37,6 +37,7 @@ public class Bone : MonoBehaviour
             GameObject.Find("Player").GetComponent<PlayerHandler>().bones += 1;
         } else if (col.gameObject.name == "EnemyTreeHeart" && hasCollided == false) {
             col.gameObject.transform.parent.parent.parent.gameObject.GetComponent<EnemyTreeAi>().health -= 50;
+            col.gameObject.transform.parent.parent.parent.gameObject.GetComponent<EnemyTreeAi>().isAwake =true;
             col.gameObject.transform.parent.parent.parent.gameObject.GetComponent<EnemyTreeAi>().animator.SetTrigger("Hit");
             hasCollided = true;
         }

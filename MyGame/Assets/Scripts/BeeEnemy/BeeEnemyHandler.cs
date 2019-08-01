@@ -9,6 +9,7 @@ public class BeeEnemyHandler : MonoBehaviour
     public float health = 100f; 
     bool hasBeenHit = false;
     Image healthBar;
+    public GameObject staticBone;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +21,7 @@ public class BeeEnemyHandler : MonoBehaviour
     void Update()
     {
         if(health <= 0) {
-            Destroy(gameObject);
+            BeeDie();
         }
         if (healthBar != null) {
             healthBar.fillAmount = health/100;
@@ -39,5 +40,10 @@ public class BeeEnemyHandler : MonoBehaviour
         if(col.gameObject.name == "Bone(Clone)") {
             hasBeenHit = false;
         }
+    }
+
+    void BeeDie() {
+        Destroy(gameObject);
+        Instantiate(staticBone, transform.position, transform.rotation);
     }
 }

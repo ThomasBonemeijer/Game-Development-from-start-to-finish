@@ -6,10 +6,10 @@ using UnityEngine.SceneManagement;
 public class SceneHandler : MonoBehaviour
 {
     private GameObject player;
+    public string currentScene;
         // called zero
     void Awake()
     {
-        // Debug.Log("Awake");
         player = GameObject.Find("Player");
     }
 
@@ -17,36 +17,36 @@ public class SceneHandler : MonoBehaviour
     void OnEnable()
     {
         // Debug.Log("OnEnable called");
-        player.GetComponent<PlayerHandler>().LoadPlayer();
+        if (player != null) {
+            player.GetComponent<PlayerHandler>().LoadPlayer();
+        }
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     // called second
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        player.GetComponent<PlayerHandler>().currentScene = scene.name;
+        if (player != null) {
+            player.GetComponent<PlayerHandler>().currentScene = scene.name;
+            currentScene = scene.name;
 
         if (scene.name == "Scene1") {
-            // Debug.Log("1");
-            if (player.GetComponent<PlayerHandler>().firstTimePlaying == true) {
+            if (player.GetComponent<PlayerHandler>().firstTimePlaying == true && player.GetComponent<PlayerHandler>().previousScene == "Scene1") {
                 player.transform.position = GameObject.Find("SpawnPointLeft").transform.position;
-                // Debug.Log("First time playing!");
             } 
             else if (player.GetComponent<PlayerHandler>().firstTimePlaying == false && player.GetComponent<PlayerHandler>().previousScene == "Scene2") {
                  player.transform.position = GameObject.Find("SpawnPointRight").transform.position;
-                // Debug.Log("Not first time playing!");
             }
             else if (player.GetComponent<PlayerHandler>().firstTimePlaying == false && player.GetComponent<PlayerHandler>().previousScene == "Scene3") {
                  player.transform.position = GameObject.Find("SpawnPointRight").transform.position;
-                // Debug.Log("Not first time playing!");
             }
             
         } else if (scene.name == "Scene2") {
-            // Debug.Log("2");
-            GameObject.Find("Player").GetComponent<PlayerHandler>().firstTimePlaying = false;
+            if(player.GetComponent<PlayerHandler>().changingScene == true) {
+                player.transform.position = GameObject.Find("SpawnPointLeft").transform.position;
+            }
         } else if (scene.name == "Scene3") {
-            // Debug.Log("3");
-            GameObject.Find("Player").GetComponent<PlayerHandler>().firstTimePlaying = false;
+        }
         }
     }
 

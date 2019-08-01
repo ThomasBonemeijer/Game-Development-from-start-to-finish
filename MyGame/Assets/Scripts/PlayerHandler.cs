@@ -13,6 +13,7 @@ public class PlayerHandler : MonoBehaviour
     public string currentScene;
     public string previousScene;
     public Vector3 spawnPoint;
+    public bool changingScene;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,13 +44,15 @@ public class PlayerHandler : MonoBehaviour
         PlayerData data = SaveSystem.LoadPlayer();
         health = data.health;
         bones = data.bones;
+        currentScene = data.currentScene;
         previousScene = data.previousScene;
         firstTimePlaying = data.firstTimePlaying;
-        // Vector3 position;
-        // position.x = data.position[0];
-        // position.y = data.position[1];
-        // position.z = data.position[2];
-        // transform.position = position;
+        changingScene = data.changingScene;
+        Vector3 position;
+        position.x = data.position[0];
+        position.y = data.position[1];
+        position.z = data.position[2];
+        transform.position = position;
     }
 
     public void ResetPlayer() {
@@ -57,6 +60,7 @@ public class PlayerHandler : MonoBehaviour
         bones = 3;
         currentScene = "Scene1";
         previousScene = "";
+        changingScene = false;
         SavePlayer();
     }
 }

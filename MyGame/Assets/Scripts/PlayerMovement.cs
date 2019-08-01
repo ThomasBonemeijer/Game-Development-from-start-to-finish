@@ -11,15 +11,16 @@ public class PlayerMovement : MonoBehaviour
     public float runSpeed = 50f;
     float horizontalMove = 0f;
     bool jump = false;
-
     // Update is called once per frame
     void Update()
     {
 
         if (joystick.Horizontal >= .2f) {
             horizontalMove = runSpeed;
+            GetComponent<PlayerHandler>().firstTimePlaying = false;
         } else if (joystick.Horizontal <= -.2f) {
             horizontalMove = -runSpeed;
+            GetComponent<PlayerHandler>().firstTimePlaying = false;
         } else {
             horizontalMove = 0;
         }

@@ -35,7 +35,7 @@ public class EnemyTreeAi : MonoBehaviour
     {
         if (isAwake == true) {
             healthBar.SetActive(true);
-            HealthBarHealth.fillAmount = health/100;
+            HealthBarHealth.fillAmount = health/300;
         } else {
             healthBar.SetActive(false);
         }

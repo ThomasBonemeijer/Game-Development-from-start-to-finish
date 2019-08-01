@@ -16,6 +16,7 @@ public class Nut : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         rb.AddForce(transform.right * forceSpeed, ForceMode2D.Impulse);
         rb.AddTorque(RotateSpeed, ForceMode2D.Impulse);
+        // Physics2D.IgnoreCollision(GameObject.FindWithTag("Nut").GetComponent<Collider2D>(), transform.GetComponent<Collider2D>());
         StartCoroutine(DestroyNut());
     }
 

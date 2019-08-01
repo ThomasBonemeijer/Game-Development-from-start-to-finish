@@ -60,23 +60,7 @@ public class BeeEnemyAi : MonoBehaviour
             currentWaypoint++;
         }
 
-        if (PlayerInRadius == true) {
-            if (target.transform.position.x >= transform.position.x) {
-                beeEnemyGfx.localScale = new Vector3(-1f, 1f, 1f);
-                // firePoint.transform.rotation = Quaternion.Euler(0, 0, 336.53f);
-            } else if (target.transform.position.x <= transform.position.x) {
-                beeEnemyGfx.transform.localScale = new Vector3(1f, 1f, 1f);
-                // firePoint.transform.rotation = Quaternion.Euler(0, 180, 336.53f);
-            } 
-        } else if (PlayerInRadius == false) {
-             if (rb.velocity.x >= 0.01f) {
-                beeEnemyGfx.localScale = new Vector3(-1f, 1f, 1f);
-                // firePoint.transform.rotation = Quaternion.Euler(0, 0, 336.53f);
-            } else if (rb.velocity.x <= -0.01f) {
-                beeEnemyGfx.transform.localScale = new Vector3(1f, 1f, 1f);
-                // firePoint.transform.rotation = Quaternion.Euler(0, 180, 336.53f);
-            }
-        }
+        FlipBeeEnemy();
     }
 
     void UpdatePath() {
@@ -128,5 +112,22 @@ public class BeeEnemyAi : MonoBehaviour
     void Shoot() {
         animator.SetTrigger("Attack");
         Instantiate(poisonBall, firePoint.transform.position, firePoint.transform.rotation);
+        FlipBeeEnemy();
+    }
+
+    void FlipBeeEnemy() {
+        if (PlayerInRadius == true) {
+            if (target.transform.position.x >= transform.position.x) {
+                beeEnemyGfx.localScale = new Vector3(-1f, 1f, 1f);
+            } else if (target.transform.position.x <= transform.position.x) {
+                beeEnemyGfx.transform.localScale = new Vector3(1f, 1f, 1f);
+            } 
+        } else if (PlayerInRadius == false) {
+             if (rb.velocity.x >= 0.01f) {
+                beeEnemyGfx.localScale = new Vector3(-1f, 1f, 1f);
+            } else if (rb.velocity.x <= -0.01f) {
+                beeEnemyGfx.transform.localScale = new Vector3(1f, 1f, 1f);
+            }
+        }
     }
 }
