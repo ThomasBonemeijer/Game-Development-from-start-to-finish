@@ -28,7 +28,6 @@ public class BombFruit : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col) {
         if (col.gameObject.name == "Player") {
-            Debug.Log("Player hit!");
             GameObject.Find("Player").GetComponent<PlayerHandler>().health -= 25f;
             Destroy(gameObject);
             Instantiate(impactEffect, transform.position, transform.rotation);

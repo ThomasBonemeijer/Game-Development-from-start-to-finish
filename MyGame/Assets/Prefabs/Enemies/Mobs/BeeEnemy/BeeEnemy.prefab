@@ -960,6 +960,7 @@ MonoBehaviour:
   health: 100
   staticBone: {fileID: 598135250481560921, guid: 6d6d3612fec1fdf4686c59cacefb44a9,
     type: 3}
+  deadBee: {fileID: 4301123167152926315, guid: e319a6239288d604b849f8f779cbd0ba, type: 3}
 --- !u!1 &7880739841383756486
 GameObject:
   m_ObjectHideFlags: 0

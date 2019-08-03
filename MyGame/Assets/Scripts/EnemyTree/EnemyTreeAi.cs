@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class EnemyTreeAi : MonoBehaviour
 {
     public GameObject healthBar;
+    public GameObject treeStump;
     Image HealthBarHealth;
     bool istriggered = false;
     public bool isAwake = false;
@@ -36,13 +37,14 @@ public class EnemyTreeAi : MonoBehaviour
         if (isAwake == true) {
             healthBar.SetActive(true);
             HealthBarHealth.fillAmount = health/300;
+            transform.Find("EyeFocusLights").gameObject.SetActive(true);
         } else {
             healthBar.SetActive(false);
+            transform.Find("EyeFocusLights").gameObject.SetActive(false);
         }
 
         if(health <= 0) {
-            healthBar.SetActive(false);
-            Destroy(gameObject);
+            EnemyTreeDead();
         }
     }
 
@@ -67,5 +69,11 @@ public class EnemyTreeAi : MonoBehaviour
         if (isAwake == true) {
             Instantiate(nut, nutFirePoint.position, nutFirePoint.rotation);
         }
+    }
+
+    void EnemyTreeDead() {
+        Destroy(gameObject);
+        healthBar.SetActive(false);
+        treeStump.SetActive(true);
     }
 }

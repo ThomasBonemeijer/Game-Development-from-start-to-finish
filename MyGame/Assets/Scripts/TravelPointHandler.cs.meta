@@ -3,7 +3,19 @@ guid: 8acf3480187d8f74483f90518a9294fc
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - upImage: {fileID: -8446461568391958912, guid: 9317db45294ce314994072618f28be83,
+      type: 3}
+  - downImage: {fileID: -2287963941196875676, guid: 9317db45294ce314994072618f28be83,
+      type: 3}
+  - leftImage: {fileID: 8428340119092001527, guid: 15d93740c57cc514b9f1e12ac7f8a2e7,
+      type: 3}
+  - rightImage: {fileID: -154645409788217874, guid: 15d93740c57cc514b9f1e12ac7f8a2e7,
+      type: 3}
+  - loadingScreen: {instanceID: 0}
+  - loadingBar: {instanceID: 0}
+  - progressText: {instanceID: 0}
+  - useButton: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

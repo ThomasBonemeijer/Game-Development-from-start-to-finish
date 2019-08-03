@@ -43,7 +43,7 @@ public class SceneHandler : MonoBehaviour
             
         } else if (scene.name == "Scene2") {
             if(player.GetComponent<PlayerHandler>().changingScene == true) {
-                player.transform.position = GameObject.Find("SpawnPointLeft").transform.position;
+                player.transform.position = GameObject.Find("SpawnPointRight").transform.position;
             }
         } else if (scene.name == "Scene3") {
         }

@@ -10,6 +10,7 @@ public class BeeEnemyHandler : MonoBehaviour
     bool hasBeenHit = false;
     Image healthBar;
     public GameObject staticBone;
+    public GameObject deadBee;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,5 +46,6 @@ public class BeeEnemyHandler : MonoBehaviour
     void BeeDie() {
         Destroy(gameObject);
         Instantiate(staticBone, transform.position, transform.rotation);
+        Instantiate(deadBee, transform.position, transform.rotation);
     }
 }
