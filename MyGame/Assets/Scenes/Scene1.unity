@@ -389,7 +389,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1176138233
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 6cf28cbb4a21b844b9a4322ed865b7b0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -650,6 +650,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1911566643}
     m_Modifications:
+    - target: {fileID: 7958341107359970064, guid: 7a4c0dd7a0f076f4cb2ce43561199346,
+        type: 3}
+      propertyPath: m_Name
+      value: LightBulbFlower (2)
+      objectReference: {fileID: 0}
     - target: {fileID: 7958341107359970070, guid: 7a4c0dd7a0f076f4cb2ce43561199346,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -705,11 +710,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7958341107359970064, guid: 7a4c0dd7a0f076f4cb2ce43561199346,
-        type: 3}
-      propertyPath: m_Name
-      value: LightBulbFlower (2)
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a4c0dd7a0f076f4cb2ce43561199346, type: 3}
 --- !u!4 &315680316 stripped
@@ -752,7 +752,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 900221819}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
@@ -895,6 +895,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 215986751}
     m_Modifications:
+    - target: {fileID: 3220449425978449043, guid: 4226394867c340f4b90c472f7203468e,
+        type: 3}
+      propertyPath: m_Name
+      value: EnemyTree
+      objectReference: {fileID: 0}
+    - target: {fileID: 3220449425978449043, guid: 4226394867c340f4b90c472f7203468e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3220449425978449040, guid: 4226394867c340f4b90c472f7203468e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -949,16 +959,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3220449425978449043, guid: 4226394867c340f4b90c472f7203468e,
-        type: 3}
-      propertyPath: m_Name
-      value: EnemyTree
-      objectReference: {fileID: 0}
-    - target: {fileID: 3220449425978449043, guid: 4226394867c340f4b90c472f7203468e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1146189992, guid: 4226394867c340f4b90c472f7203468e, type: 3}
       propertyPath: healthBar
@@ -1298,7 +1298,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1176138233
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 6cf28cbb4a21b844b9a4322ed865b7b0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1502,7 +1502,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1176138233
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 3493f32fbe9184742966e6cf30b37881, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1615,7 +1615,6 @@ Transform:
   m_Children:
   - {fileID: 1911566643}
   - {fileID: 1216941716}
-  - {fileID: 1206020530}
   - {fileID: 1749997863}
   - {fileID: 488794402}
   - {fileID: 1537533263}
@@ -1778,7 +1777,7 @@ Transform:
   - {fileID: 73107706}
   - {fileID: 20201069}
   m_Father: {fileID: 900221819}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1173847546
 GameObject:
@@ -2127,6 +2126,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 215986751}
     m_Modifications:
+    - target: {fileID: 7880739841256014698, guid: 4f6052114e059f148853e91543957e09,
+        type: 3}
+      propertyPath: m_Name
+      value: BeeEnemy
+      objectReference: {fileID: 0}
     - target: {fileID: 7880739841256014688, guid: 4f6052114e059f148853e91543957e09,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2181,11 +2185,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7880739841256014698, guid: 4f6052114e059f148853e91543957e09,
-        type: 3}
-      propertyPath: m_Name
-      value: BeeEnemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f6052114e059f148853e91543957e09, type: 3}
@@ -2406,6 +2405,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1911566643}
     m_Modifications:
+    - target: {fileID: 7958341107359970064, guid: 7a4c0dd7a0f076f4cb2ce43561199346,
+        type: 3}
+      propertyPath: m_Name
+      value: LightBulbFlower (4)
+      objectReference: {fileID: 0}
     - target: {fileID: 7958341107359970070, guid: 7a4c0dd7a0f076f4cb2ce43561199346,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2460,11 +2464,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7958341107359970064, guid: 7a4c0dd7a0f076f4cb2ce43561199346,
-        type: 3}
-      propertyPath: m_Name
-      value: LightBulbFlower (4)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a4c0dd7a0f076f4cb2ce43561199346, type: 3}
@@ -2699,8 +2698,9 @@ Transform:
   - {fileID: 1935859875}
   - {fileID: 584304178}
   - {fileID: 741641295}
+  - {fileID: 1206020530}
   m_Father: {fileID: 900221819}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1567964076
 GameObject:
@@ -2739,6 +2739,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1911566643}
     m_Modifications:
+    - target: {fileID: 7958341107359970064, guid: 7a4c0dd7a0f076f4cb2ce43561199346,
+        type: 3}
+      propertyPath: m_Name
+      value: LightBulbFlower (3)
+      objectReference: {fileID: 0}
     - target: {fileID: 7958341107359970070, guid: 7a4c0dd7a0f076f4cb2ce43561199346,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2793,11 +2798,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7958341107359970064, guid: 7a4c0dd7a0f076f4cb2ce43561199346,
-        type: 3}
-      propertyPath: m_Name
-      value: LightBulbFlower (3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a4c0dd7a0f076f4cb2ce43561199346, type: 3}
@@ -2903,7 +2903,7 @@ Transform:
   - {fileID: 1567964077}
   - {fileID: 1120745119}
   m_Father: {fileID: 900221819}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1739283451
 PrefabInstance:
@@ -2912,6 +2912,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1911566643}
     m_Modifications:
+    - target: {fileID: 7958341107359970064, guid: 7a4c0dd7a0f076f4cb2ce43561199346,
+        type: 3}
+      propertyPath: m_Name
+      value: LightBulbFlower (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 7958341107359970070, guid: 7a4c0dd7a0f076f4cb2ce43561199346,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2967,11 +2972,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7958341107359970064, guid: 7a4c0dd7a0f076f4cb2ce43561199346,
-        type: 3}
-      propertyPath: m_Name
-      value: LightBulbFlower (1)
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a4c0dd7a0f076f4cb2ce43561199346, type: 3}
 --- !u!4 &1739283452 stripped
@@ -3012,7 +3012,7 @@ Transform:
   - {fileID: 337794398}
   - {fileID: 1090677151}
   m_Father: {fileID: 900221819}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1774007544 stripped
 GameObject:
@@ -3424,6 +3424,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1749997863}
     m_Modifications:
+    - target: {fileID: 3510572567462745310, guid: ffaca2547cb430745a7a9fd4904e86de,
+        type: 3}
+      propertyPath: m_Name
+      value: BigRock
+      objectReference: {fileID: 0}
     - target: {fileID: 3510572567462745305, guid: ffaca2547cb430745a7a9fd4904e86de,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3478,11 +3483,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3510572567462745310, guid: ffaca2547cb430745a7a9fd4904e86de,
-        type: 3}
-      propertyPath: m_Name
-      value: BigRock
       objectReference: {fileID: 0}
     - target: {fileID: 3510572566966848280, guid: ffaca2547cb430745a7a9fd4904e86de,
         type: 3}
@@ -3750,17 +3750,22 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 900221819}
+    m_TransformParent: {fileID: 1537533263}
     m_Modifications:
+    - target: {fileID: 4881033743663374628, guid: 0325bcaff3978014d94c41f960c34788,
+        type: 3}
+      propertyPath: m_Name
+      value: HealthPlant
+      objectReference: {fileID: 0}
     - target: {fileID: 4881033743663374629, guid: 0325bcaff3978014d94c41f960c34788,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.310001
+      value: -9.83
       objectReference: {fileID: 0}
     - target: {fileID: 4881033743663374629, guid: 0325bcaff3978014d94c41f960c34788,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.98
+      value: 6.99
       objectReference: {fileID: 0}
     - target: {fileID: 4881033743663374629, guid: 0325bcaff3978014d94c41f960c34788,
         type: 3}
@@ -3790,7 +3795,7 @@ PrefabInstance:
     - target: {fileID: 4881033743663374629, guid: 0325bcaff3978014d94c41f960c34788,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4881033743663374629, guid: 0325bcaff3978014d94c41f960c34788,
         type: 3}
@@ -3806,11 +3811,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4881033743663374628, guid: 0325bcaff3978014d94c41f960c34788,
-        type: 3}
-      propertyPath: m_Name
-      value: HealthPlant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0325bcaff3978014d94c41f960c34788, type: 3}
@@ -3890,6 +3890,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1749997863}
     m_Modifications:
+    - target: {fileID: 6411533290722149318, guid: c89d5afd34ca9d545aca6623104d26ca,
+        type: 3}
+      propertyPath: m_Name
+      value: SmallRock2
+      objectReference: {fileID: 0}
     - target: {fileID: 6411533290722149317, guid: c89d5afd34ca9d545aca6623104d26ca,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3944,11 +3949,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6411533290722149318, guid: c89d5afd34ca9d545aca6623104d26ca,
-        type: 3}
-      propertyPath: m_Name
-      value: SmallRock2
       objectReference: {fileID: 0}
     - target: {fileID: 6411533290722149371, guid: c89d5afd34ca9d545aca6623104d26ca,
         type: 3}
@@ -4058,6 +4058,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1749997863}
     m_Modifications:
+    - target: {fileID: 6575664134810493150, guid: 9e67e5dca87a0b34c9b68e3ba2e4a19b,
+        type: 3}
+      propertyPath: m_Name
+      value: SmallRock1
+      objectReference: {fileID: 0}
     - target: {fileID: 6575664134810493151, guid: 9e67e5dca87a0b34c9b68e3ba2e4a19b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4113,11 +4118,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6575664134810493150, guid: 9e67e5dca87a0b34c9b68e3ba2e4a19b,
-        type: 3}
-      propertyPath: m_Name
-      value: SmallRock1
-      objectReference: {fileID: 0}
     - target: {fileID: 6575664134810493149, guid: 9e67e5dca87a0b34c9b68e3ba2e4a19b,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -4132,6 +4132,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1749997863}
     m_Modifications:
+    - target: {fileID: 7101614216400462748, guid: 7fc6bb05e61cbdf40ba8a2767efe2780,
+        type: 3}
+      propertyPath: m_Name
+      value: SmallRock3
+      objectReference: {fileID: 0}
     - target: {fileID: 7101614216400462749, guid: 7fc6bb05e61cbdf40ba8a2767efe2780,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4187,11 +4192,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7101614216400462748, guid: 7fc6bb05e61cbdf40ba8a2767efe2780,
-        type: 3}
-      propertyPath: m_Name
-      value: SmallRock3
-      objectReference: {fileID: 0}
     - target: {fileID: 7101614216400462755, guid: 7fc6bb05e61cbdf40ba8a2767efe2780,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -4206,6 +4206,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 215986751}
     m_Modifications:
+    - target: {fileID: 7880739841256014698, guid: 4f6052114e059f148853e91543957e09,
+        type: 3}
+      propertyPath: m_Name
+      value: BeeEnemy
+      objectReference: {fileID: 0}
     - target: {fileID: 7880739841256014688, guid: 4f6052114e059f148853e91543957e09,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4261,11 +4266,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7880739841256014698, guid: 4f6052114e059f148853e91543957e09,
-        type: 3}
-      propertyPath: m_Name
-      value: BeeEnemy
-      objectReference: {fileID: 0}
     - target: {fileID: 7880739841256014692, guid: 4f6052114e059f148853e91543957e09,
         type: 3}
       propertyPath: target
@@ -4284,6 +4284,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1911566643}
     m_Modifications:
+    - target: {fileID: 7958341107359970064, guid: 7a4c0dd7a0f076f4cb2ce43561199346,
+        type: 3}
+      propertyPath: m_Name
+      value: LightBulbFlower
+      objectReference: {fileID: 0}
     - target: {fileID: 7958341107359970070, guid: 7a4c0dd7a0f076f4cb2ce43561199346,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4338,11 +4343,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7958341107359970064, guid: 7a4c0dd7a0f076f4cb2ce43561199346,
-        type: 3}
-      propertyPath: m_Name
-      value: LightBulbFlower
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a4c0dd7a0f076f4cb2ce43561199346, type: 3}
