@@ -35,16 +35,21 @@ public class SceneHandler : MonoBehaviour
                 player.transform.position = GameObject.Find("SpawnPointLeft").transform.position;
             } 
             else if (player.GetComponent<PlayerHandler>().firstTimePlaying == false && player.GetComponent<PlayerHandler>().previousScene == "Scene2") {
-                 player.transform.position = GameObject.Find("SpawnPointRight").transform.position;
+                player.transform.position = GameObject.Find("SpawnPointRight").transform.position;
             }
             else if (player.GetComponent<PlayerHandler>().firstTimePlaying == false && player.GetComponent<PlayerHandler>().previousScene == "Scene3") {
-                 player.transform.position = GameObject.Find("SpawnPointRight").transform.position;
+                player.transform.position = GameObject.Find("SpawnPointRight").transform.position;
+            } else {
+                player.transform.position = GameObject.Find("SpawnPointRight").transform.position;
             }
             
         } else if (scene.name == "Scene2") {
             if(player.GetComponent<PlayerHandler>().changingScene == true) {
                 player.transform.position = GameObject.Find("SpawnPointRight").transform.position;
-            }
+            } 
+            // else {
+            //     player.transform.position = GameObject.Find("SpawnPointRight").transform.position;
+            // }
         } else if (scene.name == "Scene3") {
         }
         }
