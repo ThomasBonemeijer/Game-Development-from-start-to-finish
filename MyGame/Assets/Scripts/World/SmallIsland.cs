@@ -22,9 +22,9 @@ public class SmallIsland : MonoBehaviour
     {
         if (canDrop == true) {
             if (isDropping == true) {
-            transform.Translate(Vector3.down * raiseSpeed * Time.deltaTime);
+            transform.Translate(Vector3.down * dropSpeed * Time.deltaTime);
         } else if (isDropping == false) {
-            transform.position = Vector3.MoveTowards(transform.position, defaultPos, dropSpeed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, defaultPos, raiseSpeed * Time.deltaTime);
         }
         }
     }

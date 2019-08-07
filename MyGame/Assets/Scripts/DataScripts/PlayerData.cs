@@ -12,7 +12,7 @@ public class PlayerData
     public string previousScene;
     public bool firstTimePlaying;
     public float[] position;
-    public bool changingScene;
+    // public bool changingScene;
 
     public PlayerData(PlayerHandler player) {
         health = player.health;
@@ -20,7 +20,7 @@ public class PlayerData
         currentScene = player.currentScene;
         previousScene = player.currentScene;
         firstTimePlaying = player.firstTimePlaying;
-        changingScene = player.changingScene;
+        // changingScene = player.changingScene;
         
         position = new float[3];
         position[0] = player.transform.position.x;

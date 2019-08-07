@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3147096315087655346}
   - component: {fileID: 7008613480595330856}
+  - component: {fileID: 1089049116}
+  - component: {fileID: 2868945035415298522}
   m_Layer: 0
   m_Name: GameMaster
   m_TagString: Untagged
@@ -43,3 +45,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3627bc880f306e940bc91b46d4a1b4f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentScene: 
+--- !u!114 &1089049116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2350304629541067098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d80612f4927882545be1e4447f4b1ced, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: 
+  loadingScreen: {fileID: 0}
+  loadingBar: {fileID: 0}
+  progressText: {fileID: 0}
+  changingScene: 0
+--- !u!114 &2868945035415298522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2350304629541067098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c41601af3312b114c9e16be36c47287a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenuCanvas: {fileID: 149720309498369202, guid: 1d58c001b7667ae47aebd38aecb78b01,
+    type: 3}
+  UiCanvas: {fileID: 4877309294983225818, guid: 721e0d5630c4c9b40a21e191fdb33cc6,
+    type: 3}

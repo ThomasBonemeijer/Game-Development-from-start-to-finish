@@ -6,19 +6,17 @@ using UnityEngine.UI;
 public class BeeEnemyHandler : MonoBehaviour
 {
     Animator animator;
-    public float health = 100f; 
-    bool hasBeenHit = false;
+    public float health = 100f;
     Image healthBar;
     public GameObject staticBone;
     public GameObject deadBee;
-    // Start is called before the first frame update
+    
     void Start()
     {
         animator = GetComponent<Animator>();
         healthBar = transform.Find("BeeHealthBarCanvas").Find("HealthBar").GetComponent<Image>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if(health <= 0) {
@@ -30,16 +28,11 @@ public class BeeEnemyHandler : MonoBehaviour
     }
     
     void OnCollisionEnter2D(Collision2D col) {
-        if(col.gameObject.name == "Bone(Clone)" && hasBeenHit == false) {
+        if(col.gameObject.name.Contains("Bone")) {
+            Destroy(col.gameObject);
             animator.SetTrigger("Hit");
             health -= 25;
-            hasBeenHit = true;
-        }
-    }
-
-    void OnCollisionExit2D(Collision2D col) {
-        if(col.gameObject.name == "Bone(Clone)") {
-            hasBeenHit = false;
+            GameObject.Find("Player").GetComponent<PlayerHandler>().bones += 1;
         }
     }
 

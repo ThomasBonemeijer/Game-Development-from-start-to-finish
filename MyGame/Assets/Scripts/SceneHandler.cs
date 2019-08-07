@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneHandler : MonoBehaviour
 {
-    private GameObject player;
+    GameObject player;
     public string currentScene;
         // called zero
     void Awake()
@@ -33,23 +33,27 @@ public class SceneHandler : MonoBehaviour
         if (scene.name == "Scene1") {
             if (player.GetComponent<PlayerHandler>().firstTimePlaying == true && player.GetComponent<PlayerHandler>().previousScene == "Scene1") {
                 player.transform.position = GameObject.Find("SpawnPointLeft").transform.position;
+                Debug.Log("First time playing and previous scene = Scene1");
             } 
             else if (player.GetComponent<PlayerHandler>().firstTimePlaying == false && player.GetComponent<PlayerHandler>().previousScene == "Scene2") {
                 player.transform.position = GameObject.Find("SpawnPointRight").transform.position;
+                Debug.Log("Not First time playing and previous scene = Scene2");
             }
             else if (player.GetComponent<PlayerHandler>().firstTimePlaying == false && player.GetComponent<PlayerHandler>().previousScene == "Scene3") {
                 player.transform.position = GameObject.Find("SpawnPointRight").transform.position;
+                Debug.Log("Not First time playing and previous scene = Scene3");
             } else {
-                player.transform.position = GameObject.Find("SpawnPointRight").transform.position;
+                // player.transform.position = GameObject.Find("SpawnPointRight").transform.position;
+                Debug.Log("This is the last else");
             }
             
         } else if (scene.name == "Scene2") {
-            if(player.GetComponent<PlayerHandler>().changingScene == true) {
+            if(GetComponent<SceneChanger>().changingScene == true) {
                 player.transform.position = GameObject.Find("SpawnPointRight").transform.position;
             } 
-            // else {
-            //     player.transform.position = GameObject.Find("SpawnPointRight").transform.position;
-            // }
+            else {
+                player.transform.position = GameObject.Find("SpawnPointRight").transform.position;
+            }
         } else if (scene.name == "Scene3") {
         }
         }

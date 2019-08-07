@@ -13,7 +13,7 @@ public class PlayerHandler : MonoBehaviour
     public string currentScene;
     public string previousScene;
     public Vector3 spawnPoint;
-    public bool changingScene;
+    // public bool changingScene;
     // Start is called before the first frame update
     void Start()
     {
@@ -47,7 +47,7 @@ public class PlayerHandler : MonoBehaviour
         currentScene = data.currentScene;
         previousScene = data.previousScene;
         firstTimePlaying = data.firstTimePlaying;
-        changingScene = data.changingScene;
+        // changingScene = data.changingScene;
         Vector3 position;
         position.x = data.position[0];
         position.y = data.position[1];
@@ -60,7 +60,7 @@ public class PlayerHandler : MonoBehaviour
         bones = 3;
         currentScene = "Scene1";
         previousScene = "";
-        changingScene = false;
+        // changingScene = false;
         SavePlayer();
     }
 }

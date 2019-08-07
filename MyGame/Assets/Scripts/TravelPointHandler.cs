@@ -11,42 +11,24 @@ public class TravelPointHandler : MonoBehaviour
     public Sprite downImage;
     public Sprite leftImage;
     public Sprite rightImage;
-    public string sceneName;
-    public GameObject loadingScreen;
-    public Image loadingBar;
-    public Text progressText;
+    public string theSceneName;
     public GameObject useButton;
     public string direction;
+    public GameObject gameMaster;
 
     void OnTriggerEnter2D(Collider2D col) {
         if (col.gameObject.name == "Player") {
             useButton.SetActive(true);
+            gameMaster.GetComponent<SceneChanger>().sceneName = theSceneName;
             changeUseButtonImage();
-            col.gameObject.GetComponent<PlayerHandler>().changingScene = true;
+            gameMaster.GetComponent<SceneChanger>().changingScene = true;
         }
     }
 
     void OnTriggerExit2D(Collider2D col) {
         if (col.gameObject.name == "Player") {
             useButton.SetActive(false);
-            col.gameObject.GetComponent<PlayerHandler>().changingScene = false;
-        }
-    }
-    public void ChangeScene()
-    {
-        StartCoroutine(LoadAsynchronously());
-    }
-
-    IEnumerator LoadAsynchronously()
-     {
-        AsyncOperation operation = SceneManager.LoadSceneAsync (sceneName);
-        loadingScreen.SetActive(true);
-        while (!operation.isDone) {
-            float progress = Mathf.Clamp01(operation.progress / .9f);
-            loadingBar.fillAmount = progress;
-            progressText.text = Mathf.Round(progress * 100f) + "%";
-            // Debug.Log(progress);
-            yield return null;
+            gameMaster.GetComponent<SceneChanger>().changingScene = false;
         }
     }
 

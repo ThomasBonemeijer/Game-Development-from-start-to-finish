@@ -30,8 +30,7 @@ public class EnemyTreeAi : MonoBehaviour
         InvokeRepeating("DropBomb", 0, 4);
         InvokeRepeating("ShootNut", 0, 3);
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
         if (isAwake == true) {

@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class TempFile : MonoBehaviour
 {
     public void changeScene() {
+        Time.timeScale = 1;
           SceneManager.LoadScene("MainMenu");
       }
 }

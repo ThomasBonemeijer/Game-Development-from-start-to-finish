@@ -12,10 +12,9 @@ MonoImporter:
       type: 3}
   - rightImage: {fileID: -154645409788217874, guid: 15d93740c57cc514b9f1e12ac7f8a2e7,
       type: 3}
-  - loadingScreen: {instanceID: 0}
-  - loadingBar: {instanceID: 0}
-  - progressText: {instanceID: 0}
   - useButton: {instanceID: 0}
+  - gameMaster: {fileID: 2350304629541067098, guid: d29a8040182a4484aa57280b8d8a7780,
+      type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
