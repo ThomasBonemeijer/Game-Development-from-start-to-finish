@@ -79,3 +79,8 @@ MonoBehaviour:
     type: 3}
   UiCanvas: {fileID: 4877309294983225818, guid: 721e0d5630c4c9b40a21e191fdb33cc6,
     type: 3}
+  musicOnSprite: {fileID: 6074186111386423354, guid: 1f43e17151a326a4ba4b2271eee1a23a,
+    type: 3}
+  musicOffSprite: {fileID: -8833110195795953241, guid: 1f43e17151a326a4ba4b2271eee1a23a,
+    type: 3}
+  MusicIsPlaying: 0
