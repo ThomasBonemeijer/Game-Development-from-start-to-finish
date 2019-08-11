@@ -6,6 +6,7 @@ TagManager:
   tags:
   - BeeEnemy
   - Nut
+  - NormalSlime
   layers:
   - Default
   - TransparentFX

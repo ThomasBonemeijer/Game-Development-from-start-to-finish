@@ -28,7 +28,7 @@ public class Nut : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col) {
         if (col.gameObject.name == "Player") {
-            GameObject.Find("Player").GetComponent<PlayerHandler>().health -= 10;
+            col.gameObject.GetComponent<PlayerHandler>().isHit = true;
             Destroy(gameObject);
             Instantiate(nutShell, transform.position, transform.rotation);
             Instantiate(nutHead, transform.position, transform.rotation);

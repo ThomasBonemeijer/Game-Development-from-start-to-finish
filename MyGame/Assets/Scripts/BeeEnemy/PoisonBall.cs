@@ -22,7 +22,8 @@ public class PoisonBall : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col){
         if(col.gameObject.name == "Player") {
-            GameObject.Find("Player").GetComponent<PlayerHandler>().health -= 5f;
+            col.GetComponent<PlayerHandler>().health -= 5f;
+            col.GetComponent<PlayerHandler>().isHit = true;
             Instantiate(impactEffect, transform.position, transform.rotation);
             Destroy(gameObject);
         } else if (col.gameObject.layer == LayerMask.NameToLayer("Ground")){

@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class SceneChanger : MonoBehaviour
 {
+    public bool toMainMenu = false;
+    public bool toReset = false;
     public string sceneName;
     public GameObject loadingScreen;
     public Image loadingBar;
@@ -14,18 +16,31 @@ public class SceneChanger : MonoBehaviour
 
     public void ChangeScene()
     {
-        StartCoroutine(LoadAsynchronously());
+        if (toMainMenu == false && toReset == false) {
+            StartCoroutine(LoadAsynchronously());
+        } else if (toMainMenu == true && toReset == false) {
+            sceneName = "MainMenu";
+            StartCoroutine(LoadAsynchronously());
+        } else if (toMainMenu == false && toReset == true) {
+            sceneName = "Scene1";
+            GameObject.Find("Player").GetComponent<PlayerHandler>().ResetPlayer();
+            StartCoroutine(LoadAsynchronously());
+        }
     }
 
     IEnumerator LoadAsynchronously()
      {
-        AsyncOperation operation = SceneManager.LoadSceneAsync (sceneName);
-        loadingScreen.SetActive(true);
-        while (!operation.isDone) {
-            float progress = Mathf.Clamp01(operation.progress / .9f);
-            loadingBar.fillAmount = progress;
-            progressText.text = Mathf.Round(progress * 100f) + "%";
-            yield return null;
+        if (sceneName != "") {
+            AsyncOperation operation = SceneManager.LoadSceneAsync (sceneName);
+            loadingScreen.SetActive(true);
+            while (!operation.isDone) {
+                float progress = Mathf.Clamp01(operation.progress / .9f);
+                loadingBar.fillAmount = progress;
+                progressText.text = Mathf.Round(progress * 100f) + "%";
+                yield return null;
+            }
+        } else {
+            Debug.Log("No scene selected");
         }
     }
 }

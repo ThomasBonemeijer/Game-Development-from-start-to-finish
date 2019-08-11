@@ -5,6 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class PlayerData
 {
+    public int lives;
     public float health;
     public int bones;
     // public string previousScene;
@@ -15,6 +16,7 @@ public class PlayerData
     // public bool changingScene;
 
     public PlayerData(PlayerHandler player) {
+        lives = player.lives;
         health = player.health;
         bones = player.bones;
         currentScene = player.currentScene;

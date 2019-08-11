@@ -6,14 +6,14 @@ using UnityEngine.UI;
 public class UI : MonoBehaviour
 {
     public GameObject player;
-    public Text AmmoCount;
-    float numberOfBones;
+    public Text ammoCount;
+    public Text livesCount;
 
     void Update()
     {
         if(player != null) {
-            numberOfBones = player.GetComponent<PlayerHandler>().bones;
-            AmmoCount.text = numberOfBones.ToString();
+            ammoCount.text = player.GetComponent<PlayerHandler>().bones.ToString();
+            livesCount.text = player.GetComponent<PlayerHandler>().lives.ToString();
         }
     }
 }

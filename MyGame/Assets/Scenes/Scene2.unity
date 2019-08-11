@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 39272636}
   m_Layer: 0
   m_Name: NormalSlime
-  m_TagString: Untagged
+  m_TagString: NormalSlime
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -151,6 +151,8 @@ Transform:
   m_LocalPosition: {x: 15.18, y: -4, z: 0}
   m_LocalScale: {x: -0.2, y: 0.2, z: 1}
   m_Children:
+  - {fileID: 340734007}
+  - {fileID: 797388651}
   - {fileID: 1612219517}
   - {fileID: 939582872}
   - {fileID: 1111082596}
@@ -226,9 +228,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dffc0c2612cd274c9aaa41fc117a23d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
+  hasHitPlayer: 0
   playerInRange: 0
-  speed: 1.5
+  speed: 2
   isMoving: 1
+  playerDistance: 0
+  normalSlimeDead: {fileID: 2541018624065040666, guid: 90d7f0b486953fd4281523f38c2df2e1,
+    type: 3}
+  slimeSpit: {fileID: 8814945696157718071, guid: 8b28dbeb19653b847896ed42dbad6124,
+    type: 3}
 --- !u!114 &98786802 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7712807544275816417, guid: 721e0d5630c4c9b40a21e191fdb33cc6,
@@ -361,6 +370,36 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!1 &340734006
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 340734007}
+  m_Layer: 0
+  m_Name: SpitSpawnpoint1
+  m_TagString: NormalSlime
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &340734007
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 340734006}
+  m_LocalRotation: {x: 0, y: 0, z: -0.31614572, w: 0.9487107}
+  m_LocalPosition: {x: -4.7, y: 1.1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 39272633}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -36.86}
 --- !u!1001 &380912419
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -478,6 +517,10 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2054361742, guid: 721e0d5630c4c9b40a21e191fdb33cc6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4877309293136038238, guid: 721e0d5630c4c9b40a21e191fdb33cc6,
         type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.size
@@ -542,10 +585,6 @@ PrefabInstance:
     - target: {fileID: 2054361746, guid: 721e0d5630c4c9b40a21e191fdb33cc6, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 2054361742, guid: 721e0d5630c4c9b40a21e191fdb33cc6, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 721e0d5630c4c9b40a21e191fdb33cc6, type: 3}
@@ -1012,6 +1051,36 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 708487563}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &797388650
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 797388651}
+  m_Layer: 0
+  m_Name: SpitSpawnpoint2
+  m_TagString: NormalSlime
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &797388651
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 797388650}
+  m_LocalRotation: {x: -0.31614572, y: 0.9487107, z: -0, w: 0}
+  m_LocalPosition: {x: 5.5, y: 1.1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 39272633}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: -36.86}
 --- !u!4 &802054401 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6208947052548051260, guid: 78847f72ae8519f409f527f207912e2e,
@@ -1042,13 +1111,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 883722857}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.3474266, w: 0.93770725}
   m_LocalPosition: {x: -1.08, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1612219517}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -40.66}
 --- !u!114 &883722859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1264,7 +1333,7 @@ GameObject:
   - component: {fileID: 939582874}
   m_Layer: 9
   m_Name: SlimeBody
-  m_TagString: Untagged
+  m_TagString: NormalSlime
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1281,7 +1350,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 39272633}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &939582873
 SpriteRenderer:
@@ -1903,7 +1972,7 @@ GameObject:
   - component: {fileID: 1111082597}
   m_Layer: 0
   m_Name: Point Light 2D
-  m_TagString: Untagged
+  m_TagString: NormalSlime
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1915,13 +1984,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1111082595}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.34456095, w: 0.938764}
   m_LocalPosition: {x: -2.68, y: -0.23, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 39272633}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 40.31}
 --- !u!114 &1111082597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2910,13 +2979,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1513685398}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.3474266, w: 0.93770725}
   m_LocalPosition: {x: 0.96, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1612219517}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -40.66}
 --- !u!114 &1513685400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3004,7 +3073,7 @@ GameObject:
   - component: {fileID: 1612219518}
   m_Layer: 0
   m_Name: SlimeEyes1
-  m_TagString: Untagged
+  m_TagString: NormalSlime
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3023,7 +3092,7 @@ Transform:
   - {fileID: 1513685399}
   - {fileID: 883722858}
   m_Father: {fileID: 39272633}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1612219518
 SpriteRenderer:
@@ -4045,7 +4114,7 @@ GameObject:
   - component: {fileID: 2097904305}
   m_Layer: 0
   m_Name: SlimeBodySplat
-  m_TagString: Untagged
+  m_TagString: NormalSlime
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4062,7 +4131,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 39272633}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2097904305
 SpriteRenderer:
