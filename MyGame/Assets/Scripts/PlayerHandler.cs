@@ -45,7 +45,9 @@ public class PlayerHandler : MonoBehaviour
             health = 100f;
             gameObject.transform.position = spawnPoint;
         } else {
-            GameObject.Find("GameMaster").GetComponent<SceneChanger>().toReset = true;
+            GameObject.Find("GameMaster").GetComponent<SceneChanger>().toMainMenu = true;
+            ResetPlayer();
+            SavePlayer();
             GameObject.Find("GameMaster").GetComponent<SceneChanger>().ChangeScene();
         }
     }
@@ -93,6 +95,7 @@ public class PlayerHandler : MonoBehaviour
         bones = 3;
         currentScene = "Scene1";
         previousScene = "";
+        firstTimePlaying = true;
         // changingScene = false;
         SavePlayer();
     }

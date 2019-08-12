@@ -5,10 +5,10 @@ using UnityEngine;
 public class SmallIsland : MonoBehaviour
 {
     Animator animator;
-    public bool canDrop;
+    public bool canDrop = true;
     bool isDropping = false;
-    public float dropSpeed = 1;
-    public float raiseSpeed = 1;
+    public float dropSpeed = 1.5f;
+    public float raiseSpeed = .5f;
     Vector3 defaultPos;
     // Start is called before the first frame update
     void Start()

@@ -13,6 +13,11 @@ public class SceneChanger : MonoBehaviour
     public Image loadingBar;
     public Text progressText;
     public bool changingScene = false;
+    public bool firsttimePlaying;
+
+    void Start() {
+        // firsttimePlaying = PlayerData
+    }
 
     public void ChangeScene()
     {
@@ -23,7 +28,6 @@ public class SceneChanger : MonoBehaviour
             StartCoroutine(LoadAsynchronously());
         } else if (toMainMenu == false && toReset == true) {
             sceneName = "Scene1";
-            GameObject.Find("Player").GetComponent<PlayerHandler>().ResetPlayer();
             StartCoroutine(LoadAsynchronously());
         }
     }
@@ -42,5 +46,7 @@ public class SceneChanger : MonoBehaviour
         } else {
             Debug.Log("No scene selected");
         }
+        toMainMenu = false;
+        toReset = false;
     }
 }

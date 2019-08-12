@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 9190883796226559256}
   - component: {fileID: 9190883796226559259}
   - component: {fileID: 9190883796226559258}
+  - component: {fileID: 5064402929704873813}
   m_Layer: 9
   m_Name: SmallIslandSprite
   m_TagString: Untagged
@@ -94,7 +95,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: -0.0051517487, y: 1.0499287}
   m_SpriteTilingProperty:
@@ -109,6 +110,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.5645447, y: 0.2695923}
   m_EdgeRadius: 0
+--- !u!251 &5064402929704873813
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9190883796226559257}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &9190883796991747669
 GameObject:
   m_ObjectHideFlags: 0
@@ -182,8 +202,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canDrop: 1
-  dropSpeed: 1
-  raiseSpeed: 1
+  dropSpeed: 1.5
+  raiseSpeed: 0.5
 --- !u!95 &1716389122
 Animator:
   serializedVersion: 3

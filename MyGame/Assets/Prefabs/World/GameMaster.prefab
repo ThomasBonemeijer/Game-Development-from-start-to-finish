@@ -58,6 +58,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d80612f4927882545be1e4447f4b1ced, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  toMainMenu: 0
+  toReset: 0
   sceneName: 
   loadingScreen: {fileID: 0}
   loadingBar: {fileID: 0}
@@ -75,12 +77,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c41601af3312b114c9e16be36c47287a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenuCanvas: {fileID: 149720309498369202, guid: 1d58c001b7667ae47aebd38aecb78b01,
-    type: 3}
-  UiCanvas: {fileID: 4877309294983225818, guid: 721e0d5630c4c9b40a21e191fdb33cc6,
-    type: 3}
-  musicOnSprite: {fileID: 6074186111386423354, guid: 1f43e17151a326a4ba4b2271eee1a23a,
-    type: 3}
-  musicOffSprite: {fileID: -8833110195795953241, guid: 1f43e17151a326a4ba4b2271eee1a23a,
-    type: 3}
-  MusicIsPlaying: 0
+  pauseMenuCanvas: {fileID: 0}
+  UiCanvas: {fileID: 0}
+  musicOnSprite: {fileID: 0}
+  musicOffSprite: {fileID: 0}
+  musicIsPlaying: 1
+  MusicButton: {fileID: 0}

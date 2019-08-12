@@ -1,16 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NormalSlime : MonoBehaviour
 {
-    public float health = 100f;
+    public float health;
+    Image healthBar;
+    float damage;
     public bool hasHitPlayer = false;
     SpriteRenderer bodySprite;
     GameObject player;
     public bool playerInRange = false;
     Animator animator;
     public float speed = 1.5f;
+    float attackDistance;
     public bool isMoving = true;
     Vector3 idlePosition;
     public float playerDistance;
@@ -18,9 +22,20 @@ public class NormalSlime : MonoBehaviour
     public GameObject slimeSpit;
     Transform spitSpawnpoint1;
     Transform spitSpawnpoint2;
-    // Start is called before the first frame update
+
     void Start()
     {
+        if (gameObject.name.StartsWith("NormalSlime")) {
+            attackDistance = 2.7f;
+            damage = 20f;
+            health = 100f;
+        } else if (gameObject.name.StartsWith("SmallSlime")) {
+            attackDistance = 1.3f;
+            damage = 10f;
+            health = 50f;
+        }
+        healthBar = transform.Find("SlimeHealthBarCanvas").Find("HealthBar").GetComponent<Image>();
+        healthBar.transform.rotation = Quaternion.Euler(0, 0, 0);
         spitSpawnpoint1 = transform.Find("SpitSpawnpoint1");
         spitSpawnpoint2 = transform.Find("SpitSpawnpoint2");
         bodySprite = transform.Find("SlimeBody").GetComponent<SpriteRenderer>();
@@ -32,19 +47,25 @@ public class NormalSlime : MonoBehaviour
 
     void Update()
     {
-        FlipSlime();
         playerDistance = Vector3.Distance(GameObject.Find("Player").transform.position, transform.position);
 
-        if(playerInRange == true && playerDistance >= 2.7f) {
+        if(playerInRange == true && playerDistance >= attackDistance) {
+            FlipSlime();
             SlimeMovement();
             animator.SetBool("Move", true);
-        } else if (playerInRange == true && playerDistance <= 2.7f) {
+        } else if (playerInRange == true && playerDistance <= attackDistance) {
+            FlipSlime();
             animator.SetBool("Move", false);
-                animator.SetBool("IsAttacking", true);
+            animator.SetBool("IsAttacking", true);
         } else {
             animator.SetBool("Move", false);
             animator.SetBool("IsAttacking", false);
         }
+
+        if (healthBar != null) {
+            healthBar.fillAmount = health/100;
+        }
+
         if(health <= 0f) {
             Die();
         }
@@ -95,10 +116,12 @@ public class NormalSlime : MonoBehaviour
         } else {
             transform.rotation = Quaternion.Euler(0, 180, 0);
         }
+        healthBar.transform.rotation = Quaternion.Euler(0, 0, 0);
     }
 
     void Attack() {
         player.GetComponent<PlayerHandler>().isHit = true;
+        player.GetComponent<PlayerHandler>().health -= damage;
         StartCoroutine(DamagePlayer(.9f));
     }
 
@@ -108,12 +131,12 @@ public class NormalSlime : MonoBehaviour
     }
 
     void Die() {
-        Destroy(gameObject);
         if(gameObject.name.StartsWith("NormalSlime")) {
             Instantiate(normalSlimeDead, transform.position, transform.rotation);
             Instantiate(slimeSpit, spitSpawnpoint1.position, spitSpawnpoint1.rotation);
             Instantiate(slimeSpit, spitSpawnpoint2.position, spitSpawnpoint2.rotation);
         }
+        Destroy(gameObject);
     }
 
     void SwitchIsMoving() {

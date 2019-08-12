@@ -10,12 +10,13 @@ public class MainMenuHandler : MonoBehaviour
     public Image loadingBar;
     public Text progressText;
     public string playerScene;
+    bool firstTimePlaying;
     public Image ContinueButton;
-    public bool firstTimePlaying = false;
 
     void Start() {
         PlayerData data = SaveSystem.LoadPlayer();
         playerScene = data.currentScene;
+        firstTimePlaying = data.firstTimePlaying;
     }
 
     void Update() {

@@ -18,7 +18,7 @@ public class SlimeSpit : MonoBehaviour
     {
         if(col.gameObject.layer == LayerMask.NameToLayer("Ground")) {
             Destroy(gameObject);
-            Instantiate(smallSlime, transform.position, transform.rotation);
+            Instantiate(smallSlime, transform.position, Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0));
         }
     }
 }
