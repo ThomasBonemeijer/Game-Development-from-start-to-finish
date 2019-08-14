@@ -5,20 +5,22 @@ using UnityEngine.UI;
 
 public class EnemyTreeAi : MonoBehaviour
 {
-    public GameObject healthBar;
-    public GameObject treeStump;
-    Image HealthBarHealth;
-    bool istriggered = false;
     public bool isAwake = false;
-    public Animator animator;
+    public float health = 300f;
+    public GameObject healthBar;
     public GameObject bombFruit;
     public GameObject nut;
+    public GameObject treeStump;
     public Transform nutFirePoint;
     public Transform[] bombSpawnArray;
-    public float health = 300f;
-    // Start is called before the first frame update
+    public Animator animator;
+    bool istriggered = false;
+    GameObject player;
+    Image HealthBarHealth;
+
     void Start()
     {
+        player = GameObject.Find("Player");
         HealthBarHealth = healthBar.transform.GetChild(0).GetComponent<Image>();
         nutFirePoint = GameObject.Find("NutFirePoint").transform;
 
@@ -71,6 +73,8 @@ public class EnemyTreeAi : MonoBehaviour
     }
 
     void EnemyTreeDead() {
+        player.GetComponent<PlayerHandler>().hasKilledEnemyTree = true;
+        player.GetComponent<PlayerHandler>().SavePlayer();
         Destroy(gameObject);
         healthBar.SetActive(false);
         treeStump.SetActive(true);

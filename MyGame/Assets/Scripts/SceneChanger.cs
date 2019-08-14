@@ -8,19 +8,27 @@ public class SceneChanger : MonoBehaviour
 {
     public bool toMainMenu = false;
     public bool toReset = false;
+    public bool changingScene = false;
+    public bool firsttimePlaying;
+    GameObject player;
     public string sceneName;
     public GameObject loadingScreen;
     public Image loadingBar;
     public Text progressText;
-    public bool changingScene = false;
-    public bool firsttimePlaying;
 
     void Start() {
-        // firsttimePlaying = PlayerData
+        player = GameObject.Find("Player");
     }
 
     public void ChangeScene()
     {
+        if (player != null) {
+            player.GetComponent<PlayerHandler>().SavePlayer();
+            Debug.Log("Player saved!");
+        } else if (player == null) {
+            Debug.Log("There is no player gameobject in this scene");
+        }
+
         if (toMainMenu == false && toReset == false) {
             StartCoroutine(LoadAsynchronously());
         } else if (toMainMenu == true && toReset == false) {

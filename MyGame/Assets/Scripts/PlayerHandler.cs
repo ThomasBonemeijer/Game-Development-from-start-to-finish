@@ -5,19 +5,20 @@ using UnityEngine.UI;
 
 public class PlayerHandler : MonoBehaviour
 {
-    public int lives = 3;
+    public bool firstTimePlaying;
+    public bool hasKilledEnemyTree;
+    public bool hasCollectedKey;
+    public bool hasCollectedTablet;
     public bool isHit = false;
-    public SpriteRenderer[] childrenSprites;
-    Image healthBar;
+    public int lives = 3;
     public float health;
     public int bones = 1;
-
-    public bool firstTimePlaying;
     public string currentScene;
     public string previousScene;
     public Vector3 spawnPoint;
-    // public bool changingScene;
-    // Start is called before the first frame update
+    public SpriteRenderer[] childrenSprites;
+    Image healthBar;
+
     void Start()
     {
         childrenSprites = GetComponentsInChildren<SpriteRenderer>();
@@ -25,7 +26,6 @@ public class PlayerHandler : MonoBehaviour
         healthBar = GameObject.Find("HealthbarFill").GetComponent<Image>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         //check if the player's health has reached 0
@@ -64,7 +64,9 @@ public class PlayerHandler : MonoBehaviour
         currentScene = data.currentScene;
         previousScene = data.previousScene;
         firstTimePlaying = data.firstTimePlaying;
-        // changingScene = data.changingScene;
+        hasKilledEnemyTree = data.hasKilledEnemyTree;
+        hasCollectedKey = data.hasCollectedKey;
+        hasCollectedTablet = data.hasCollectedTablet;
         Vector3 position;
         position.x = data.position[0];
         position.y = data.position[1];
@@ -72,7 +74,7 @@ public class PlayerHandler : MonoBehaviour
         transform.position = position;
     }
 
-    // Set the players color to red when hit
+    // set the players color to red when hit
     void IsHit() {
         foreach (SpriteRenderer childSprite in childrenSprites){
             childSprite.color = Color.red;
@@ -96,7 +98,9 @@ public class PlayerHandler : MonoBehaviour
         currentScene = "Scene1";
         previousScene = "";
         firstTimePlaying = true;
-        // changingScene = false;
+        hasKilledEnemyTree = false;
+        hasCollectedKey = false;
+        hasCollectedTablet = false;
         SavePlayer();
     }
 }

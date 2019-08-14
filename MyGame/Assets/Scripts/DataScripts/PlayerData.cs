@@ -5,15 +5,16 @@ using UnityEngine;
 [System.Serializable]
 public class PlayerData
 {
+    public bool firstTimePlaying;
+    public bool hasKilledEnemyTree;
+    public bool hasCollectedKey;
+    public bool hasCollectedTablet;
     public int lives;
     public float health;
     public int bones;
-    // public string previousScene;
     public string currentScene;
     public string previousScene;
-    public bool firstTimePlaying;
     public float[] position;
-    // public bool changingScene;
 
     public PlayerData(PlayerHandler player) {
         lives = player.lives;
@@ -22,7 +23,9 @@ public class PlayerData
         currentScene = player.currentScene;
         previousScene = player.currentScene;
         firstTimePlaying = player.firstTimePlaying;
-        // changingScene = player.changingScene;
+        hasKilledEnemyTree = player.hasKilledEnemyTree;
+        hasCollectedKey = player.hasCollectedKey;
+        hasCollectedTablet = player.hasCollectedTablet;
         
         position = new float[3];
         position[0] = player.transform.position.x;
