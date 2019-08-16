@@ -34,6 +34,7 @@ public class NormalSlime : MonoBehaviour
             damage = 10f;
             health = 50f;
         }
+        
         healthBar = transform.Find("SlimeHealthBarCanvas").Find("HealthBar").GetComponent<Image>();
         healthBar.transform.rotation = Quaternion.Euler(0, 0, 0);
         spitSpawnpoint1 = transform.Find("SpitSpawnpoint1");

@@ -11,6 +11,7 @@ public class EnemyTreeAi : MonoBehaviour
     public GameObject bombFruit;
     public GameObject nut;
     public GameObject treeStump;
+    public GameObject chestKey;
     public Transform nutFirePoint;
     public Transform[] bombSpawnArray;
     public Animator animator;
@@ -75,8 +76,11 @@ public class EnemyTreeAi : MonoBehaviour
     void EnemyTreeDead() {
         player.GetComponent<PlayerHandler>().hasKilledEnemyTree = true;
         player.GetComponent<PlayerHandler>().SavePlayer();
-        Destroy(gameObject);
+        Destroy(transform.gameObject);
         healthBar.SetActive(false);
         treeStump.SetActive(true);
+        if (player.GetComponent<PlayerHandler>().hasCollectedKey == false) {
+            Instantiate(chestKey, transform.position, transform.rotation);
+        }
     }
 }

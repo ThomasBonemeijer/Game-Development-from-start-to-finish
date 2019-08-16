@@ -13,12 +13,6 @@ public class RockCaveDoor : MonoBehaviour
         player = GameObject.Find("Player");
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void OnTriggerEnter2D(Collider2D col) {
         if(col.gameObject.name == "Player") {
             if(player.GetComponent<PlayerHandler>().hasCollectedTablet == true) {

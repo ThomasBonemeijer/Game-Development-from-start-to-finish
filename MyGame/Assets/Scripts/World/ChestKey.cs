@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tablet : MonoBehaviour
+public class ChestKey : MonoBehaviour
 {
     Rigidbody2D rb2D;
     
@@ -14,7 +14,7 @@ public class Tablet : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col) {
         if(col.gameObject.name == "Player") {
-            col.gameObject.GetComponent<PlayerHandler>().hasCollectedTablet = true;
+            col.gameObject.GetComponent<PlayerHandler>().hasCollectedKey = true;
             col.gameObject.GetComponent<PlayerHandler>().SavePlayer();
             Destroy(transform.parent.gameObject);
         }

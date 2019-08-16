@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class PauseMenuHandler : MonoBehaviour
 {
     public GameObject pauseMenuCanvas;
+    public GameObject tempCanvas;
     public GameObject UiCanvas;
     public Sprite musicOnSprite;
     public Sprite musicOffSprite;
@@ -42,5 +43,11 @@ public class PauseMenuHandler : MonoBehaviour
         } else {
             MusicButton.sprite = musicOffSprite;
         }
+    }
+
+    public void TempVoid() {
+        UiCanvas.SetActive(false);
+        tempCanvas.SetActive(true);
+        Time.timeScale = 0;
     }
 }
