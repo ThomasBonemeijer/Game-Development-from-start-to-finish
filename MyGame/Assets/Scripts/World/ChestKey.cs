@@ -14,6 +14,7 @@ public class ChestKey : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col) {
         if(col.gameObject.name == "Player") {
+            FindObjectOfType<AudioManager>().Play("Pop");
             col.gameObject.GetComponent<PlayerHandler>().hasCollectedKey = true;
             col.gameObject.GetComponent<PlayerHandler>().SavePlayer();
             Destroy(transform.parent.gameObject);

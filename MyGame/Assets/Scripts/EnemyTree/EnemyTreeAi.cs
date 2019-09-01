@@ -52,7 +52,8 @@ public class EnemyTreeAi : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col) {
         if  (istriggered == false) {
-            if (col.gameObject.name == "Player") {
+            if (col.gameObject.name == "Player" && col.gameObject.GetComponent<PlayerHandler>().hasKilledEnemyTree == false) {
+                FindObjectOfType<AudioManager>().Play("EnemyTreeAwake");
                 isAwake = true;
                 animator.SetTrigger("IsAwake");
             }

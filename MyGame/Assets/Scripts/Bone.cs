@@ -19,8 +19,11 @@ public class Bone : MonoBehaviour
     {
         if (col.gameObject.name == "Player")
         {
+            FindObjectOfType<AudioManager>().Play("Pop");
             Destroy(gameObject);
             GameObject.Find("Player").GetComponent<PlayerHandler>().bones += 1;
+        } else {
+            FindObjectOfType<AudioManager>().Play("BoneHit");
         }
     }
 }

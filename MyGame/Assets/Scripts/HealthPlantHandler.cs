@@ -25,6 +25,7 @@ public class HealthPlantHandler : MonoBehaviour
     {
         if (col.gameObject.name == "Player" && playerHealth < 100f)
         {
+            FindObjectOfType<AudioManager>().Play("Pop");
             animator.SetBool("IsPlucked", true);
             player.GetComponent<PlayerHandler>().health = 100f;
             Invoke("ResetFruit", resetFruitTime);

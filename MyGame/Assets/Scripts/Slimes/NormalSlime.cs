@@ -105,6 +105,7 @@ public class NormalSlime : MonoBehaviour
 
     void SlimeMovement() {
         if(isMoving == true) {
+            FindObjectOfType<AudioManager>().Play("SlimeMove");
             Vector2 playerPos = player.transform.position;
             transform.position = Vector2.MoveTowards(transform.position, playerPos, speed * Time.deltaTime);
         }

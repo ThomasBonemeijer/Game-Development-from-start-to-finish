@@ -40,6 +40,7 @@ public class PlayerHandler : MonoBehaviour
     }
 
     private void PlayerHasDied() {
+        FindObjectOfType<AudioManager>().Play("PlayerDeath");
         if (lives != 0) {
             lives -= 1;
             health = 100f;
@@ -76,6 +77,7 @@ public class PlayerHandler : MonoBehaviour
 
     // set the players color to red when hit
     void IsHit() {
+        FindObjectOfType<AudioManager>().Play("PlayerHit");
         foreach (SpriteRenderer childSprite in childrenSprites){
             childSprite.color = Color.red;
         }  

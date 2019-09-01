@@ -375,13 +375,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d7ccde2b67387a41a15caf3012ed088, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  firstTimePlaying: 1
+  hasKilledEnemyTree: 0
+  hasCollectedKey: 0
+  hasCollectedTablet: 0
+  isHit: 0
+  lives: 3
   health: 100
   bones: 3
-  firstTimePlaying: 1
   currentScene: 
   previousScene: 
   spawnPoint: {x: 0, y: 0, z: 0}
-  changingScene: 0
+  childrenSprites: []
 --- !u!114 &8906700933257807947
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -15,6 +15,7 @@ public class EnemyTreeHeart : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col) {
         if(col.gameObject.name.Contains("Bone")) {
+            FindObjectOfType<AudioManager>().Play("EnemyTreeHit");
             treeEnemy.GetComponent<EnemyTreeAi>().isAwake = true;
             treeEnemy.GetComponent<EnemyTreeAi>().health -= 50;
             treeEnemy.GetComponent<Animator>().SetTrigger("Hit");

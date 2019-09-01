@@ -19,6 +19,7 @@ public class JumpMushroom : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col) {
         if (col.gameObject.name == "Player") {
+            FindObjectOfType<AudioManager>().Play("Bounce");
             animator.SetTrigger("Hit");
         }
     }
