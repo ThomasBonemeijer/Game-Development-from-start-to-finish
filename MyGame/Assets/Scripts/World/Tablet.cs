@@ -17,7 +17,7 @@ public class Tablet : MonoBehaviour
             FindObjectOfType<AudioManager>().Play("Pop");
             col.gameObject.GetComponent<PlayerHandler>().hasCollectedTablet = true;
             col.gameObject.GetComponent<PlayerHandler>().SavePlayer();
-            Destroy(transform.parent.gameObject);
+            Destroy(gameObject);
         }
     }
 }

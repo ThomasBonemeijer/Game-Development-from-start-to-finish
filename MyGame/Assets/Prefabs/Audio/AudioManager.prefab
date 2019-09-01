@@ -107,3 +107,10 @@ MonoBehaviour:
     spatialBlend: 0
     loop: 0
     source: {fileID: 0}
+  - name: SlimeMove
+    clip: {fileID: 8300000, guid: 2f06b3f09de931f448e93d2b3d00b186, type: 3}
+    volume: 0.2
+    pitch: 1
+    spatialBlend: 0
+    loop: 0
+    source: {fileID: 0}
